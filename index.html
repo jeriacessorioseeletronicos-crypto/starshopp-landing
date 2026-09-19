@@ -880,5 +880,24 @@ body{
   onScroll();
 })();
 </script>
+  <script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (!params.toString()) return;
+
+  const productUrl = 'https://starshopp.com.br/produtos/suporte-starlink-mini-veicular-conversor-integrado-12-p-30v-l30m/';
+
+  document.querySelectorAll('a[href="' + productUrl + '"]').forEach(function (link) {
+    const url = new URL(link.href);
+
+    params.forEach(function (value, key) {
+      url.searchParams.set(key, value);
+    });
+
+    link.href = url.toString();
+  });
+})();
+</script>
 </body>
 </html>

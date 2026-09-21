@@ -886,7 +886,7 @@ body{
 
 <div class="sticky" id="sticky">
   <div class="sticky-inner">
-    <div class="sticky-price"><small>12x de</small><b>R$ 42,51</b></div>
+    <div class="sticky-price"><small>12x de</small><b>R$ 32,81</b></div>
     <a class="cta" href="https://starshopp.com.br/produtos/suporte-starlink-mini-veicular-conversor-integrado-12-p-30v-l30m/">QUERO O MEU AGORA <span class="cta-arrow">→</span></a>
   </div>
 </div>
@@ -967,6 +967,25 @@ body{
 
   setTimeout(showRandomPurchase, 2500);
   setInterval(showRandomPurchase, 7000);
+})();
+</script>
+  <script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (!params.toString()) return;
+
+  const productUrl = 'https://starshopp.com.br/produtos/suporte-starlink-mini-veicular-conversor-integrado-12-p-30v-l30m/';
+
+  document.querySelectorAll('a[href="' + productUrl + '"]').forEach(function (link) {
+    const url = new URL(link.href);
+
+    params.forEach(function (value, key) {
+      url.searchParams.set(key, value);
+    });
+
+    link.href = url.toString();
+  });
 })();
 </script>
 </body>

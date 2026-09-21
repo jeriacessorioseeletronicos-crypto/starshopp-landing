@@ -6,6 +6,23 @@
 <meta name="theme-color" content="#04080d">
 <title>Suporte + Conversor para Starlink Mini | Star Shopp</title>
 <meta name="description" content="Suporte veicular com conversor integrado 12V → 30V para Starlink Mini, com ventosas e proteção em EVA. Cabo veicular de 2 metros incluso no kit.">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4535291050059333');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4535291050059333&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
 :root{
   --bg:#04080d;
@@ -461,13 +478,35 @@ body{
 }
 .hero-art:before,.hero-art:after{display:none!important}
 .hero-floating img{
-  animation:productFloat 4.8s ease-in-out infinite;
+  animation:productFloatBlack 4.8s ease-in-out infinite;
   transform-origin:center center;
   will-change:transform;
 }
-@keyframes productFloat{
+@keyframes productFloatBlack{
   0%,100%{transform:translate(-50%,-50%) translateY(0) scale(1) rotate(0deg)}
   50%{transform:translate(-50%,-50%) translateY(-14px) scale(1.035) rotate(-0.45deg)}
+}
+@keyframes productFloatWhite{
+  0%,100%{transform:translate(-50%,-50%) translateY(0) scale(.76) rotate(0deg)}
+  50%{transform:translate(-50%,-50%) translateY(-10px) scale(.79) rotate(0.5deg)}
+}
+.hero-img-black{left:58%!important;top:53%!important;z-index:3;animation-name:productFloatBlack!important}
+.hero-img-white{
+  left:39%!important;top:47%!important;z-index:2;
+  animation-name:productFloatWhite!important;
+  filter:drop-shadow(0 22px 22px rgba(0,0,0,.42)) brightness(1.04)!important;
+  opacity:.98;
+}
+.color-badge{
+  position:absolute;z-index:4;left:16px;bottom:16px;
+  padding:8px 12px;border-radius:999px;
+  background:rgba(4,10,16,.88);border:1px solid rgba(15,122,239,.32);
+  color:#dbe9f7;font-size:11px;font-weight:850;backdrop-filter:blur(10px);
+}
+@media (max-width:759px){
+  .hero-img-black{left:60%!important;top:52%!important}
+  .hero-img-white{left:37%!important;top:46%!important}
+  .color-badge{left:12px;bottom:12px;font-size:10px;padding:7px 10px}
 }
 .hero-intro-card{
   border:1px solid rgba(20,131,245,.24);border-radius:24px;padding:22px;
@@ -605,7 +644,9 @@ body{
     <div class="hero-layout">
       <div class="hero-art reveal hero-floating">
         <div class="art-badge"><strong>2 em 1</strong> • Suporte + conversor</div>
-        <img src="assets/support-transparent.png" alt="Suporte Star Shopp para Starlink Mini com ventosas" fetchpriority="high">
+        <img class="hero-img-white" src="assets/support-white.png" alt="Suporte Star Shopp branco para Starlink Mini" loading="eager">
+        <img class="hero-img-black" src="assets/support-transparent.png" alt="Suporte Star Shopp preto para Starlink Mini com ventosas" fetchpriority="high">
+        <div class="color-badge">Preto & Branco disponíveis</div>
       </div>
 
       <div class="hero-side">
@@ -799,10 +840,10 @@ body{
 
     <div class="final-offer reveal">
       <div class="offer-top"><span class="offer-tag">Oferta atual</span><span class="old">De R$ 379,00</span></div>
-      <div class="price-row"><div class="price" aria-label="R$ 319,00"><span class="price-currency">R$</span><span class="price-major">319</span><span class="price-dec">,00</span></div></div>
-      <span class="installment-label">ou <em>12x de R$ 32,81 no cartão</em></span>
+      <span class="installment-label">12x de <em>no cartão</em></span>
+      <div class="price-row"><div class="price" aria-label="R$ 42,51"><span class="price-currency">R$</span><span class="price-major">42</span><span class="price-dec">,51</span></div></div>
       <div class="pix">ou <strong>R$ 312,62 no Pix</strong></div>
-      <a class="cta" href="https://checkout.starshopp.net/VCCL1O8SD9FS">QUERO GARANTIR O MEU AGORA <span class="cta-arrow">→</span></a>
+      <a class="cta" href="https://starshopp.com.br/produtos/suporte-starlink-mini-veicular-conversor-integrado-12-p-30v-l30m/">QUERO GARANTIR O MEU AGORA <span class="cta-arrow">→</span></a>
       <div class="guarantees">
         <div class="guarantee">✓ Compra protegida</div>
         <div class="guarantee">✓ Envio para todo o Brasil</div>
@@ -845,8 +886,8 @@ body{
 
 <div class="sticky" id="sticky">
   <div class="sticky-inner">
-    <div class="sticky-price"><small>por</small><b>R$ 319,00</b></div>
-    <a class="cta" href="https://checkout.starshopp.net/VCCL1O8SD9FS">QUERO O MEU AGORA <span class="cta-arrow">→</span></a>
+    <div class="sticky-price"><small>12x de</small><b>R$ 42,51</b></div>
+    <a class="cta" href="https://starshopp.com.br/produtos/suporte-starlink-mini-veicular-conversor-integrado-12-p-30v-l30m/">QUERO O MEU AGORA <span class="cta-arrow">→</span></a>
   </div>
 </div>
 

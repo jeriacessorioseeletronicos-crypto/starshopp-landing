@@ -275,6 +275,39 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
 .sticky-price{padding-left:4px;min-width:92px}.sticky-price small{display:block;color:#9db1c6;font-size:9px}.sticky-price b{display:block;color:var(--accent);font-size:19px;letter-spacing:-.03em}.sticky .cta{margin:0;min-height:48px;flex:1;font-size:13px}
 .sticky .cta-arrow{font-size:18px}
 
+.purchase-popup{
+  position:fixed;
+  top:calc(14px + env(safe-area-inset-top,0px));
+  left:14px;
+  z-index:140;
+  max-width:280px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 14px;
+  border-radius:14px;
+  background:rgba(6,14,23,.92);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(15,122,239,.25);
+  box-shadow:0 14px 32px rgba(0,0,0,.30);
+  opacity:0;
+  transform:translateX(-120%);
+  transition:opacity .45s ease,transform .45s cubic-bezier(.22,1,.36,1);
+  pointer-events:none;
+}
+.purchase-popup.show{opacity:1;transform:translateX(0)}
+.purchase-popup-icon{
+  flex:none;width:34px;height:34px;border-radius:50%;
+  background:rgba(17,231,162,.14);color:#11e7a2;
+  display:grid;place-items:center;font-size:16px;
+}
+.purchase-popup-text{font-size:12px;line-height:1.35;color:#eef6ff}
+.purchase-popup-text strong{color:#fff;font-weight:900}
+.purchase-popup-text span{display:block;color:#93a9bc;font-size:10.5px;margin-top:2px}
+@media (min-width:760px){
+  .purchase-popup{top:calc(20px + env(safe-area-inset-top,0px));left:20px;max-width:300px}
+}
+
 @media (min-width:760px){
   .container{width:min(calc(100% - 60px),var(--max))}
   .hero{padding:30px 0 62px}
@@ -805,6 +838,11 @@ body{
   </div>
 </footer>
 
+<div class="purchase-popup" id="purchasePopup">
+  <div class="purchase-popup-icon">✓</div>
+  <div class="purchase-popup-text" id="purchasePopupText"></div>
+</div>
+
 <div class="sticky" id="sticky">
   <div class="sticky-inner">
     <div class="sticky-price"><small>por</small><b>R$ 319,00</b></div>
@@ -864,6 +902,30 @@ body{
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
+
+  // Popup de compras recentes
+  const firstNames = ['Carlos','Marcos','Fernanda','Juliana','Rafael','Bruno','Camila','Patrícia','Diego','Larissa','Eduardo','Vanessa','Thiago','Amanda','Rodrigo','Priscila','André','Bianca','Gustavo','Renata','Leandro','Fabiana','Marcelo','Aline','Felipe','Débora','Ricardo','Tatiane','Gabriel','Simone'];
+  const lastInitials = ['S.','M.','R.','A.','C.','L.','P.','F.','O.','B.','T.','G.','N.','D.'];
+  const locations = ['São Paulo, SP','Goiânia, GO','Curitiba, PR','Belo Horizonte, MG','Porto Alegre, RS','Salvador, BA','Brasília, DF','Campinas, SP','Fortaleza, CE','Recife, PE','Florianópolis, SC','Ribeirão Preto, SP','Uberlândia, MG','Londrina, PR','Manaus, AM','Vitória, ES','Cuiabá, MT','Anápolis, GO','Sorocaba, SP','Joinville, SC'];
+
+  const popupEl = document.querySelector('#purchasePopup');
+  const popupTextEl = document.querySelector('#purchasePopupText');
+  let popupTimer = null;
+
+  function showRandomPurchase(){
+    if(!popupEl || !popupTextEl) return;
+    const name = firstNames[Math.floor(Math.random()*firstNames.length)] + ' ' + lastInitials[Math.floor(Math.random()*lastInitials.length)];
+    const location = locations[Math.floor(Math.random()*locations.length)];
+    const qty = Math.random() < 0.78 ? 1 : 2;
+    const qtyLabel = qty === 1 ? '1 unidade' : '2 unidades';
+    popupTextEl.innerHTML = '<strong>'+name+'</strong> acabou de comprar '+qtyLabel+'<span>'+location+'</span>';
+    popupEl.classList.add('show');
+    clearTimeout(popupTimer);
+    popupTimer = setTimeout(()=>{ popupEl.classList.remove('show'); }, 4000);
+  }
+
+  setTimeout(showRandomPurchase, 2500);
+  setInterval(showRandomPurchase, 7000);
 })();
 </script>
 </body>

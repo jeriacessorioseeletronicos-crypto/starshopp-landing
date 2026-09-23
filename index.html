@@ -1029,24 +1029,6 @@ body{
   });
 })();
 </script>
-<script>
-(function () {
-  document.querySelectorAll('a[href^="https://checkout.starshopp.net"]').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      if (typeof fbq === 'undefined') return;
-      e.preventDefault();
-      var destination = link.href;
-      fbq('track', 'InitiateCheckout', {
-        content_name: 'Suporte Starlink Mini Veicular + Conversor Integrado',
-        value: 319.00,
-        currency: 'BRL'
-      });
-      setTimeout(function () {
-        window.location.href = destination;
-      }, 150);
-    });
-  });
-})();
-</script>
+
 </body>
 </html>

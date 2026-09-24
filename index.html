@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#04080d">
 <title>Suporte + Conversor para Starlink Mini | Star Shopp</title>
-<meta name="description" content="Suporte veicular com conversor integrado 12V → 30V para Starlink Mini, com ventosas e proteção em EVA. Cabo veicular de 2 metros incluso no kit.">
-<!-- Meta Pixel Code -->
+<meta name="description" content="Suporte veicular com conversor integrado 12V para Starlink Mini, com ventosas e protecao em EVA. Cabo veicular incluso no kit.">
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -22,7 +21,6 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=4535291050059333&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
 <style>
 :root{
   --bg:#04080d;
@@ -140,6 +138,7 @@ h1{font-size:clamp(39px,11vw,82px);line-height:.97;letter-spacing:-.055em;margin
 .offer-tag{display:inline-flex;align-items:center;padding:6px 9px;border-radius:999px;background:var(--accent);color:#08182c;font-size:10px;font-weight:950;letter-spacing:.06em;text-transform:uppercase}
 .old{color:#7e93aa;text-decoration:line-through;font-size:13px}
 .installment-label{display:block;color:#d7e4ef;font-size:18px;margin-top:13px}
+.price-tag{color:#9fb4c6;font-size:14px;font-weight:800}
 .price-row{display:flex;align-items:flex-end;gap:8px}
 .price{font-size:clamp(56px,18vw,92px);line-height:.84;color:var(--accent);font-weight:950;letter-spacing:-.07em}
 .price-dec{font-size:18px;font-weight:900;color:#78b7ff;padding-bottom:7px}
@@ -230,16 +229,11 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
   linear-gradient(160deg,#0a1622,#050b12);display:grid;place-items:center;position:relative;box-shadow:var(--shadow)
 }
 .video-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 0 42%,rgba(255,255,255,.035) 43% 44%,transparent 45%)}
-.video-grid{
-  position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:28px 28px
-}
 .video-content{position:relative;text-align:center;z-index:1}
 .video-play{
   width:72px;height:72px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;
   background:var(--accent);color:#061426;font-size:27px;padding-left:4px;box-shadow:0 0 0 13px rgba(15,122,239,.08),0 20px 40px rgba(15,122,239,.18)
 }
-.video-content strong{display:block;font-size:16px}.video-content span{display:block;margin-top:5px;color:#94a9bb;font-size:12px}
-
 .proof-head{display:grid;grid-template-columns:1fr;gap:20px;align-items:end}
 .proof-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .stat{padding:15px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025)}
@@ -297,7 +291,7 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
 .faq summary{cursor:pointer;list-style:none;font-weight:850;font-size:14px;padding-right:25px;position:relative}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary:after{content:"+";position:absolute;right:0;top:-3px;color:var(--accent);font-size:21px;font-weight:600}
-.faq details[open] summary:after{content:"–"}
+.faq details[open] summary:after{content:"-"}
 .faq p{color:var(--muted);font-size:13px;margin:10px 0 0;max-width:780px}
 
 .notice{
@@ -317,37 +311,18 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
 .sticky .cta-arrow{font-size:18px}
 
 .purchase-popup{
-  position:fixed;
-  top:calc(14px + env(safe-area-inset-top,0px));
-  left:14px;
-  z-index:140;
-  max-width:280px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:11px 14px;
-  border-radius:14px;
-  background:rgba(6,14,23,.92);
-  backdrop-filter:blur(14px);
-  border:1px solid rgba(15,122,239,.25);
-  box-shadow:0 14px 32px rgba(0,0,0,.30);
-  opacity:0;
-  transform:translateX(-120%);
-  transition:opacity .45s ease,transform .45s cubic-bezier(.22,1,.36,1);
-  pointer-events:none;
+  position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:14px;z-index:140;max-width:280px;
+  display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:14px;
+  background:rgba(6,14,23,.92);backdrop-filter:blur(14px);border:1px solid rgba(15,122,239,.25);
+  box-shadow:0 14px 32px rgba(0,0,0,.30);opacity:0;transform:translateX(-120%);
+  transition:opacity .45s ease,transform .45s cubic-bezier(.22,1,.36,1);pointer-events:none;
 }
 .purchase-popup.show{opacity:1;transform:translateX(0)}
-.purchase-popup-icon{
-  flex:none;width:34px;height:34px;border-radius:50%;
-  background:rgba(17,231,162,.14);color:#11e7a2;
-  display:grid;place-items:center;font-size:16px;
-}
+.purchase-popup-icon{flex:none;width:34px;height:34px;border-radius:50%;background:rgba(17,231,162,.14);color:#11e7a2;display:grid;place-items:center;font-size:16px}
 .purchase-popup-text{font-size:12px;line-height:1.35;color:#eef6ff}
 .purchase-popup-text strong{color:#fff;font-weight:900}
 .purchase-popup-text span{display:block;color:#93a9bc;font-size:10.5px;margin-top:2px}
-@media (min-width:760px){
-  .purchase-popup{top:calc(20px + env(safe-area-inset-top,0px));left:20px;max-width:300px}
-}
+@media (min-width:760px){ .purchase-popup{top:calc(20px + env(safe-area-inset-top,0px));left:20px;max-width:300px} }
 
 @media (min-width:760px){
   .container{width:min(calc(100% - 60px),var(--max))}
@@ -369,57 +344,23 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
   .sticky{display:none}
   .footer{padding-bottom:46px}
 }
-
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   *,*:before,*:after{transition:none!important;animation:none!important}
 }
-
-/* ===== V3 refinements ===== */
-:root{
-  --blue:#1483f5;
-  --blue2:#0b63bf;
-  --price-blue:#11e7a2;
-  --price-green:#11e7a2;
-  --accent:#1483f5;
-  --accent2:#0b63bf;
-  --accent-soft:rgba(20,131,245,.14);
-  --price-blue:#11e7a2;
-  --price-green:#11e7a2;
-}
-body{
-  background:
-    radial-gradient(circle at 8% 0%, rgba(15,122,239,.08), transparent 23rem),
-    radial-gradient(circle at 94% 8%, rgba(15,122,239,.09), transparent 24rem),
-    var(--bg);
-}
+/* V3 refinements */
 .topbar{background:#07131f;color:#c5d8e8}
 .brand span,.kicker,.h1-blue{color:var(--blue)!important}
 .hero{background:
   radial-gradient(circle at 72% 24%,rgba(15,122,239,.16),transparent 30%),
   linear-gradient(180deg,#07131f 0%,#04080d 100%)}
 .hero-floating{
-  min-height:430px!important;
-  overflow:visible!important;
+  min-height:430px!important;overflow:visible!important;
   background:radial-gradient(ellipse at 50% 48%,rgba(15,122,239,.16),transparent 54%)!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-.hero-floating:before{
-  inset:6% 12% auto 12%!important;
-  height:74%!important;
-  background:radial-gradient(ellipse at center,rgba(15,122,239,.15),transparent 66%)!important;
-  filter:blur(18px)!important;
-}
-.hero-floating:after{
-  bottom:9%!important;
-  left:10%!important;right:10%!important;
-  background:linear-gradient(90deg,transparent,rgba(15,122,239,.40),transparent)!important;
+  border:0!important;box-shadow:none!important;
 }
 .hero-floating img{
-  width:min(92%,520px)!important;
-  max-height:430px!important;
-  object-fit:contain!important;
+  width:min(92%,520px)!important;max-height:430px!important;object-fit:contain!important;
   transform:translate(-50%,-50%)!important;
   filter:drop-shadow(0 34px 34px rgba(0,0,0,.58)) drop-shadow(0 0 34px rgba(15,122,239,.12))!important;
 }
@@ -431,48 +372,39 @@ body{
 }
 .offer-tag{background:var(--blue)!important;color:#fff!important}
 .installment-label{font-weight:750}.installment-label em{font-style:normal;color:#91a8ba;font-weight:600;font-size:.8em}
-.price{
-  color:var(--blue)!important;
-  display:inline-flex!important;
-  align-items:baseline!important;
-  white-space:nowrap!important;
-  gap:1px!important;
-  font-variant-numeric:tabular-nums;
-}
+.price{color:var(--blue)!important;display:inline-flex!important;align-items:baseline!important;white-space:nowrap!important;gap:1px!important;font-variant-numeric:tabular-nums}
 .price-currency{font-size:.47em;line-height:1;font-weight:900;letter-spacing:-.04em}
 .price-major{font-size:1em;line-height:1;font-weight:950;letter-spacing:-.07em}
 .price-dec{font-size:.43em!important;line-height:1!important;color:var(--blue)!important;padding:0!important;margin-left:1px;font-weight:950!important;align-self:flex-end!important;margin-bottom:.10em}
 .pix strong,.sticky-price b{color:var(--blue)!important}
 .cta{background:linear-gradient(180deg,#2489f6,#0f6fdd)!important;color:#fff!important;box-shadow:0 14px 30px rgba(15,122,239,.28)!important}
 .cta:hover{box-shadow:0 18px 36px rgba(15,122,239,.36)!important}
-.trust-line .trust-pill{color:#a8bac7;background:rgba(255,255,255,.025)}
 .features .feature{background:linear-gradient(180deg,#081826,#07121c)}
-.feature .iconbox{margin:0 auto 14px!important}
 .feature h3,.feature p{text-align:center}
-.feature h3{color:#f7fbff}
-.feature p{color:#abc0cf}
+.feature h3{color:#f7fbff}.feature p{color:#abc0cf}
 .section.soft{background:#06111b}
-.section.light{color:#07121c!important}
-.section.light h2{color:#07121c}
-.spec-list{border-top:1px solid rgba(7,18,28,.13)}
+.section.light{color:#07121c!important}.section.light h2{color:#07121c}
 .spec{padding:18px 13px!important;border-bottom:1px solid rgba(7,18,28,.12)!important;opacity:.42;transform:translateX(-12px);position:relative!important;background:transparent;transition:opacity .5s ease,transform .5s ease,background .35s ease,box-shadow .35s ease!important}
-.spec:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:transparent;border-radius:3px;transition:background .35s ease}
 .spec.active{opacity:1;transform:none;background:rgba(15,122,239,.065);box-shadow:inset 0 0 0 1px rgba(15,122,239,.08)}
-.spec.active:before{background:var(--blue)}
 .spec.active b{color:var(--blue)}
 .spec-media{background:linear-gradient(145deg,#e9f4ff,#f7fbff)!important;border-color:rgba(7,18,28,.10)!important}
 .spec-media img{width:min(90%,540px);max-height:520px;object-fit:contain}
-.steps{gap:14px!important}
 .step{background:#07131f!important;border:1px solid rgba(15,122,239,.23)!important;color:#f2f7fb!important;box-shadow:0 12px 30px rgba(2,12,22,.14);transition:transform .45s ease,border-color .35s ease,box-shadow .35s ease,background .35s ease!important}
-.step.active{transform:translateX(6px);border-color:rgba(15,122,239,.58)!important;box-shadow:0 18px 36px rgba(15,122,239,.12),inset 0 0 30px rgba(15,122,239,.04)}
+.step.active{transform:translateX(6px);border-color:rgba(15,122,239,.58)!important}
 .step-num{background:rgba(15,122,239,.16)!important;color:#65aafa!important;border:1px solid rgba(15,122,239,.26)}
 .step h3{color:#fff!important}.step p{color:#c0ced9!important}
 .included-section{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:32px;align-items:center;margin-top:64px;padding:28px;border:1px solid rgba(15,122,239,.15);border-radius:28px;background:linear-gradient(145deg,rgba(15,122,239,.06),rgba(255,255,255,.78));box-shadow:0 24px 60px rgba(7,18,28,.08)}
-.included-copy h3{margin:10px 0 12px;font-size:clamp(26px,4vw,42px);line-height:1.04;letter-spacing:-.045em;color:#07121c}.included-copy p{margin:0;color:#557084;max-width:520px}.included-badge{display:inline-flex;align-items:center;margin-top:18px;padding:10px 13px;border-radius:999px;background:rgba(15,122,239,.10);color:#0b62bf;font-size:12px;font-weight:900;border:1px solid rgba(15,122,239,.17)}
-.included-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.included-card{position:relative;min-height:275px;border-radius:23px;overflow:hidden;border:1px solid rgba(7,18,28,.10);background:#f8fbfe;display:grid;place-items:center;padding:18px}.included-card:after{content:"";position:absolute;inset:auto 12% 6% 12%;height:38%;background:radial-gradient(ellipse at center,rgba(15,122,239,.13),transparent 68%);filter:blur(12px)}.included-card img{position:relative;z-index:1;width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 20px 24px rgba(0,0,0,.16))}.included-tag{position:absolute;z-index:3;top:13px;left:13px;padding:7px 9px;border-radius:999px;background:rgba(7,18,28,.88);color:#fff;font-size:10px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;border:1px solid rgba(15,122,239,.28)}.cable-card img{width:94%}
-.marketplace-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.marketplace-trust-item{display:flex;gap:10px;align-items:flex-start;padding:13px 12px;border:1px solid rgba(7,18,28,.10);border-radius:16px;background:linear-gradient(180deg,#fafdff,#f0f7fd)}.trust-check{width:24px;height:24px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(15,122,239,.12);color:var(--blue);font-weight:950}.marketplace-trust-item strong{display:block;color:#132737;font-size:12px}.marketplace-trust-item small{display:block;color:#738897;font-size:10px;margin-top:3px;line-height:1.25}
-.platform{background:#081420!important;border-color:rgba(15,122,239,.18)!important}.platform i{background:var(--blue)!important;box-shadow:0 0 10px rgba(15,122,239,.45)!important}
-.video-card{border-color:rgba(15,122,239,.25)!important;background:radial-gradient(circle at 50% 50%,rgba(15,122,239,.12),transparent 46%),linear-gradient(160deg,#091725,#04080d)!important}.video-play{background:var(--blue)!important;color:#fff!important;box-shadow:0 0 0 13px rgba(15,122,239,.08),0 20px 40px rgba(15,122,239,.18)!important}
+.included-copy h3{margin:10px 0 12px;font-size:clamp(26px,4vw,42px);line-height:1.04;letter-spacing:-.045em;color:#07121c}
+.included-copy p{margin:0;color:#557084;max-width:520px}
+.included-badge{display:inline-flex;align-items:center;margin-top:18px;padding:10px 13px;border-radius:999px;background:rgba(15,122,239,.10);color:#0b62bf;font-size:12px;font-weight:900;border:1px solid rgba(15,122,239,.17)}
+.marketplace-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+.marketplace-trust-item{display:flex;gap:10px;align-items:flex-start;padding:13px 12px;border:1px solid rgba(7,18,28,.10);border-radius:16px;background:linear-gradient(180deg,#fafdff,#f0f7fd)}
+.trust-check{width:24px;height:24px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(15,122,239,.12);color:var(--blue);font-weight:950}
+.marketplace-trust-item strong{display:block;color:#132737;font-size:12px}
+.marketplace-trust-item small{display:block;color:#738897;font-size:10px;margin-top:3px;line-height:1.25}
+.platform{background:#081420!important;border-color:rgba(15,122,239,.18)!important}
+.platform i{background:var(--blue)!important;box-shadow:0 0 10px rgba(15,122,239,.45)!important}
+.video-card{border-color:rgba(15,122,239,.25)!important;background:radial-gradient(circle at 50% 50%,rgba(15,122,239,.12),transparent 46%),linear-gradient(160deg,#091725,#04080d)!important}
 .notice{border-color:rgba(20,131,245,.24);background:rgba(20,131,245,.07);color:#b7cde0}
 .sticky{border-color:rgba(15,122,239,.25);background:rgba(4,8,13,.84)}
 .sticky .cta{background:linear-gradient(180deg,#2489f6,#0f6fdd)!important}
@@ -482,61 +414,27 @@ body{
   .art-badge{top:12px;left:12px}
   .price{font-size:clamp(56px,18vw,82px)!important}
   .price-currency{font-size:.46em}.price-dec{font-size:.40em!important}
-  .included-section{grid-template-columns:1fr;padding:20px;margin-top:48px}.included-grid{grid-template-columns:1fr}.included-card{min-height:240px}.cable-card{min-height:220px}
+  .included-section{grid-template-columns:1fr;padding:20px;margin-top:48px}
   .marketplace-trust{grid-template-columns:1fr 1fr}.marketplace-trust-item{min-height:75px}
-  .step{padding:18px 16px!important}
-  .step.active{transform:translateY(-4px)!important}
+  .step{padding:18px 16px!important}.step.active{transform:translateY(-4px)!important}
 }
-@media (min-width:760px){
-  .hero-floating img{width:min(94%,600px)!important;max-height:600px!important}
-}
-@media (prefers-reduced-motion: reduce){
-  .spec,.step,.included-section,.included-card{transition:none!important}
-}
+@media (min-width:760px){ .hero-floating img{width:min(94%,600px)!important;max-height:600px!important} }
 
-
-/* ===== V4 refinements ===== */
-.hero-art{
-  border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;
-  overflow:visible!important;
-}
+/* V4 refinements: dual product float + intro card */
+.hero-art{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
 .hero-art:before,.hero-art:after{display:none!important}
-.hero-floating img{
-  animation:productFloatBlack 4.8s ease-in-out infinite;
-  transform-origin:center center;
-  will-change:transform;
-}
-@keyframes productFloatBlack{
-  0%,100%{transform:translate(-50%,-50%) translateY(0) scale(1) rotate(0deg)}
-  50%{transform:translate(-50%,-50%) translateY(-14px) scale(1.035) rotate(-0.45deg)}
-}
-@keyframes productFloatWhite{
-  0%,100%{transform:translate(-50%,-50%) translateY(0) scale(.76) rotate(0deg)}
-  50%{transform:translate(-50%,-50%) translateY(-10px) scale(.79) rotate(0.5deg)}
-}
+.hero-floating img{animation:productFloatBlack 4.8s ease-in-out infinite;transform-origin:center center;will-change:transform}
+@keyframes productFloatBlack{0%,100%{transform:translate(-50%,-50%) translateY(0) scale(1) rotate(0deg)}50%{transform:translate(-50%,-50%) translateY(-14px) scale(1.035) rotate(-0.45deg)}}
+@keyframes productFloatWhite{0%,100%{transform:translate(-50%,-50%) translateY(0) scale(.76) rotate(0deg)}50%{transform:translate(-50%,-50%) translateY(-10px) scale(.79) rotate(0.5deg)}}
 .hero-img-black{left:58%!important;top:53%!important;z-index:3;animation-name:productFloatBlack!important}
-.hero-img-white{
-  left:39%!important;top:47%!important;z-index:2;
-  animation-name:productFloatWhite!important;
-  filter:drop-shadow(0 22px 22px rgba(0,0,0,.42)) brightness(1.04)!important;
-  opacity:.98;
-}
-.color-badge{
-  position:absolute;z-index:4;left:16px;bottom:16px;
-  padding:8px 12px;border-radius:999px;
-  background:rgba(4,10,16,.88);border:1px solid rgba(15,122,239,.32);
-  color:#dbe9f7;font-size:11px;font-weight:850;backdrop-filter:blur(10px);
-}
+.hero-img-white{left:39%!important;top:47%!important;z-index:2;animation-name:productFloatWhite!important;filter:drop-shadow(0 22px 22px rgba(0,0,0,.42)) brightness(1.04)!important;opacity:.98}
+.color-badge{position:absolute;z-index:4;left:16px;bottom:16px;padding:8px 12px;border-radius:999px;background:rgba(4,10,16,.88);border:1px solid rgba(15,122,239,.32);color:#dbe9f7;font-size:11px;font-weight:850;backdrop-filter:blur(10px)}
 @media (max-width:759px){
   .hero-img-black{left:60%!important;top:52%!important}
   .hero-img-white{left:37%!important;top:46%!important}
   .color-badge{left:12px;bottom:12px;font-size:10px;padding:7px 10px}
 }
-.hero-intro-card{
-  border:1px solid rgba(20,131,245,.24);border-radius:24px;padding:22px;
-  background:linear-gradient(145deg,rgba(20,131,245,.09),rgba(255,255,255,.025));
-  box-shadow:0 20px 44px rgba(0,0,0,.20);
-}
+.hero-intro-card{border:1px solid rgba(20,131,245,.24);border-radius:24px;padding:22px;background:linear-gradient(145deg,rgba(20,131,245,.09),rgba(255,255,255,.025));box-shadow:0 20px 44px rgba(0,0,0,.20)}
 .hero-intro-kicker{display:block;color:#7eb7fa;text-transform:uppercase;font-size:10px;font-weight:950;letter-spacing:.12em;margin-bottom:8px}
 .hero-intro-card h3{margin:0 0 8px;font-size:clamp(25px,6.5vw,34px);line-height:1.04;letter-spacing:-.04em}
 .hero-intro-card p{margin:0;color:#b9c9d6;font-size:13px;line-height:1.6}
@@ -548,19 +446,17 @@ body{
 .price-row{justify-content:center!important}
 .pix{text-align:center!important}
 .offer .cta,.final-offer .cta{margin-left:auto!important;margin-right:auto!important}
-.trust-line{max-width:520px;margin-left:auto!important;margin-right:auto!important}
 .feature{min-height:132px!important}
-.feature h3,.feature p{text-align:center}
 .feature .iconbox{display:none!important}
 .included-section{grid-template-columns:1fr 1.3fr!important}
 .included-combo{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px;min-height:290px}
 .included-piece{position:relative;min-height:280px;border-radius:22px;border:1px solid rgba(7,18,28,.10);background:rgba(255,255,255,.56);display:grid;place-items:center;padding:20px;overflow:hidden}
-.included-piece:after{content:"";position:absolute;inset:auto 8% 4% 8%;height:36%;background:radial-gradient(ellipse at center,rgba(20,131,245,.13),transparent 68%);filter:blur(10px)}
 .included-piece span{position:absolute;z-index:3;top:12px;left:12px;padding:7px 9px;border-radius:999px;background:rgba(6,18,29,.92);color:#fff;font-size:9px;font-weight:950;letter-spacing:.05em}
 .included-piece img{position:relative;z-index:2;width:94%;height:92%;object-fit:contain;filter:drop-shadow(0 16px 22px rgba(0,0,0,.13))}
 .cable-piece img{width:98%}
 .combo-plus{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:28px;font-weight:900;box-shadow:0 10px 22px rgba(20,131,245,.25);position:relative;z-index:4}
-.platform{padding:7px 10px!important}.platform-logo{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none;background:#fff;color:#0a1926;font-weight:950;font-size:11px;line-height:1}
+.platform{padding:7px 10px!important}
+.platform-logo{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none;background:#fff;color:#0a1926;font-weight:950;font-size:11px;line-height:1}
 .platform-logo svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .platform-logo.ml{background:#ffe43b;color:#101010;border-radius:50%;font-size:10px}
 .platform-logo.shopee{background:#ee4b2b;color:#fff}
@@ -568,12 +464,15 @@ body{
 .platform-logo.magalu{background:#1683f5;color:#fff;font-size:16px}
 .platform-logo.tiktok{background:#111;color:#fff}
 .ml-proof-card{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-top:18px;padding:16px;border-radius:20px;border:1px solid rgba(15,110,200,.18);background:linear-gradient(145deg,#f7fbff,#edf6ff);box-shadow:0 14px 34px rgba(7,18,28,.08)}
-.ml-proof-icon{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:#ffe43b;color:#1c2a34;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.ml-proof-icon{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:#ffe43b;color:#1c2a34}
 .ml-proof-icon svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .ml-proof-copy span{display:block;color:#5d7d93;font-size:9px;font-weight:950;letter-spacing:.1em}
 .ml-proof-copy strong{display:block;color:#123047;font-size:13px;margin-top:3px}
 .ml-proof-copy small{display:block;color:#72899a;font-size:10px;line-height:1.45;margin-top:4px}
-.ml-proof-meter{min-width:150px}.meter-line{height:9px;border-radius:999px;background:#dfeaf3;padding:2px}.meter-line span{display:block;width:100%;height:100%;border-radius:999px;background:linear-gradient(90deg,#f8d541 0 28%,#5fa7ff 28% 58%,#1483f5 58% 100%)}.ml-proof-meter small{display:block;text-align:center;margin-top:6px;color:#6f8798;font-size:9px}
+.ml-proof-meter{min-width:150px}
+.meter-line{height:9px;border-radius:999px;background:#dfeaf3;padding:2px}
+.meter-line span{display:block;width:100%;height:100%;border-radius:999px;background:linear-gradient(90deg,#f8d541 0 28%,#5fa7ff 28% 58%,#1483f5 58% 100%)}
+.ml-proof-meter small{display:block;text-align:center;margin-top:6px;color:#6f8798;font-size:9px}
 .sticky-price{text-align:center!important}
 @media(max-width:759px){
   .hero-layout{gap:10px!important}
@@ -583,74 +482,80 @@ body{
   .included-section{grid-template-columns:1fr!important}
   .included-combo{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:6px;min-height:250px}
   .included-piece{min-height:230px;padding:12px}
-  .included-piece span{font-size:8px;padding:6px 7px;top:9px;left:9px}
   .combo-plus{width:34px;height:34px;font-size:22px}
   .ml-proof-card{grid-template-columns:auto 1fr;align-items:start}
   .ml-proof-meter{grid-column:1/-1;min-width:0;margin-top:2px}
-  .platforms{gap:7px!important}
 }
-@media(prefers-reduced-motion:reduce){
-  .hero-floating img{animation:none!important}
-}
+@media(prefers-reduced-motion:reduce){ .hero-floating img{animation:none!important} }
 
-
-/* ===== V5 BLUE-ONLY PALETTE ===== */
-:root{
-  --blue:#1483f5;
-  --blue2:#0b63bf;
-  --accent:#1483f5;
-  --accent2:#0b63bf;
-  --accent-soft:rgba(20,131,245,.14);
-  --price-blue:#1483f5;
-}
-.hero .art-badge strong,.eyebrow,.kicker,.h1-blue,.brand span,.secure-dot,.price,.price-dec,.pix strong,.sticky-price b,.platform i,.faq summary:after{color:var(--blue)!important}
-.secure-dot,.platform i{background:var(--blue)!important;box-shadow:0 0 12px rgba(20,131,245,.45)}
-.eyebrow{background:rgba(20,131,245,.10)!important;border-color:rgba(20,131,245,.30)!important;color:#9ecbff!important}
-.eyebrow:before{background:var(--blue)!important;box-shadow:0 0 10px rgba(20,131,245,.7)}
-.offer-tag{background:var(--blue)!important;color:#fff!important}
-.cta,.sticky .cta{background:linear-gradient(180deg,#2f93ff,#0f6fdd)!important;color:#fff!important}
-.iconbox,.step-num,.included-badge,.marketplace-trust .trust-check{background:rgba(20,131,245,.14)!important;color:var(--blue)!important}
-.price{color:var(--blue)!important}
-.price-dec{color:#78b7ff!important}
-.video-play{background:var(--blue)!important}
-.meter-line span{background:linear-gradient(90deg,#b9dcff 0 28%,#69afff 28% 58%,#1483f5 58% 100%)!important}
-.notice{border-color:rgba(20,131,245,.24)!important;background:rgba(20,131,245,.07)!important;color:#9fb7cf!important}
-
-/* ===== V6 PRODUCT / PRICE CORRECTIONS ===== */
-:root{ --price-green:#11e7a2; --price-blue:#11e7a2; }
+/* V6: price color correction */
+:root{ --price-green:#11e7a2; }
 .price,.price-dec,.pix strong,.sticky-price b{color:var(--price-green)!important}
-.price-dec{color:var(--price-green)!important}
-.hero-floating img{object-fit:contain!important}
-.included-copy .included-badge{color:#0b62bf!important;background:rgba(20,131,245,.10)!important;border-color:rgba(15,122,239,.17)!important}
 
-/* ===== V8 VIDEO: VERTICAL PLAYER ===== */
+/* V8: vertical video player */
 .video-card{
-  width:min(100%,390px)!important;
-  aspect-ratio:9/16!important;
-  min-height:0!important;
-  max-width:none!important;
-  margin:0 auto!important;
-  display:block!important;
-  overflow:hidden!important;
-  position:relative!important;
-  border-radius:25px!important;
-  background:#050b12!important;
-  border:1px solid rgba(15,122,239,.28)!important;
-  box-shadow:var(--shadow)!important;
+  width:min(100%,390px)!important;aspect-ratio:9/16!important;min-height:0!important;max-width:none!important;
+  margin:0 auto!important;display:block!important;overflow:hidden!important;position:relative!important;
+  border-radius:25px!important;background:#050b12!important;border:1px solid rgba(15,122,239,.28)!important;box-shadow:var(--shadow)!important;
 }
-.video-card:before,.video-grid,.video-content{display:none!important}
-.video-element{
-  display:block!important;
-  width:100%!important;
-  height:100%!important;
-  object-fit:cover!important;
-  background:#050b12!important;
-}
+.video-card:before{display:none!important}
+.video-element{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;background:#050b12!important}
 @media (min-width:760px){.video-card{width:min(100%,420px)!important}}
+
+/* V9: variant selector */
+.variant-block{margin-top:20px;text-align:left}
+.variant-group{margin-bottom:16px}
+.variant-label{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#9fb4c6;margin-bottom:9px}
+.variant-label b{color:#eef6ff;text-transform:none;font-weight:800;letter-spacing:0;font-size:12px}
+.variant-options{display:flex;gap:8px;flex-wrap:wrap}
+.variant-swatch{
+  position:relative;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:13px;
+  border:1.5px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);color:#cfdce7;
+  font-size:12.5px;font-weight:800;cursor:pointer;transition:border-color .2s ease,background .2s ease,color .2s ease;
+}
+.variant-swatch input{position:absolute;opacity:0;width:0;height:0}
+.variant-swatch .dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.35);flex:none}
+.variant-swatch.dot-black .dot{background:#0c1216}
+.variant-swatch.dot-white .dot{background:#f4f8fb}
+.variant-swatch:has(input:checked){border-color:var(--blue);background:rgba(20,131,245,.14);color:#fff}
+.variant-swatch .len-diff{font-size:10px;font-weight:700;color:#7fb2e6}
+.variant-swatch:has(input:checked) .len-diff{color:#bfe0ff}
+@media(max-width:759px){.variant-options{justify-content:center}}
+
+/* V9: testimonials */
+.testi-wrap{padding:0 44px}
+@media(max-width:759px){.testi-wrap{padding:0 40px}}
+
+/* V11: buybox (foto + variantes lado a lado, estilo marketplace) */
+.buybox{display:flex;flex-direction:column;gap:22px}
+.buybox-photo{
+  position:relative;border-radius:22px;overflow:hidden;padding:20px;min-height:200px;
+  background:radial-gradient(circle at 50% 40%,rgba(15,122,239,.14),transparent 60%),linear-gradient(160deg,#0d1b28,#070f18);
+  border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;
+}
+.buybox-photo img{width:min(70%,230px);filter:drop-shadow(0 20px 22px rgba(0,0,0,.45));transition:opacity .2s ease}
+.buybox-photo-badge{position:absolute;top:12px;left:12px;padding:6px 10px;border-radius:999px;background:rgba(4,10,16,.85);color:#dbe9f7;font-size:10px;font-weight:900;border:1px solid rgba(255,255,255,.14)}
+.buybox-info{text-align:left}
+@media(min-width:680px){
+  .buybox{flex-direction:row;align-items:stretch}
+  .buybox-photo{flex:0 0 40%}
+  .buybox-info{flex:1}
+}
+/* V11: garantias como lista simples (nao parecem botao) */
+.guarantees{display:flex;flex-direction:column;gap:9px;margin-top:20px;text-align:left;max-width:360px;margin-left:auto;margin-right:auto;padding:0;background:none;border:0}
+.guarantee{display:flex;align-items:center;gap:9px;color:#b7c7d6;font-size:12.5px;background:none;border:0;padding:0;text-align:left}
+.guarantee:before{content:"✓";color:var(--price-green);font-weight:900;flex:none}
+@media(min-width:680px){.guarantees{text-align:left}}
+
+/* V12: galeria "encaixe perfeito" */
+.fit-gallery{display:grid;grid-template-columns:1fr;gap:14px;margin-top:32px;max-width:640px;margin-left:auto;margin-right:auto}
+.fit-shot{border-radius:22px;overflow:hidden;background:#fff;border:1px solid rgba(7,18,28,.08);box-shadow:0 16px 40px rgba(7,18,28,.10)}
+.fit-shot img{width:100%;height:auto;display:block}
+@media(min-width:680px){.fit-gallery{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
-<div class="topbar">Desenvolvido para <b>Starlink Mini</b> • Suporte + conversor integrado em uma única solução</div>
+<div class="topbar">Desenvolvido para <b>Starlink Mini</b> - Suporte + conversor integrado em uma unica solucao</div>
 
 <header class="hero" id="inicio">
   <div class="container">
@@ -661,25 +566,25 @@ body{
 
     <div class="hero-copy reveal">
       <span class="eyebrow">Suporte + conversor 2 em 1</span>
-      <h1>Sua Starlink Mini pronta para <span class="h1-blue">acompanhar você.</span></h1>
-      <p class="lead">Uma solução compacta para uso móvel: suporte por ventosas e conversor integrado 12V → 30V. O cabo veicular de 2 metros acompanha o kit.</p>
+      <h1>Sua Starlink Mini pronta para <span class="h1-blue">acompanhar voce.</span></h1>
+      <p class="lead">Uma solucao compacta para uso movel: suporte por ventosas e conversor integrado 12V para 30V. O cabo veicular acompanha o kit - escolha o tamanho ideal para o seu uso.</p>
     </div>
 
     <div class="hero-layout">
       <div class="hero-art reveal hero-floating">
-        <div class="art-badge"><strong>2 em 1</strong> • Suporte + conversor</div>
+        <div class="art-badge"><strong>2 em 1</strong> - Suporte + conversor</div>
         <img class="hero-img-white" src="assets/support-white.png" alt="Suporte Star Shopp branco para Starlink Mini" loading="eager">
         <img class="hero-img-black" src="assets/support-transparent.png" alt="Suporte Star Shopp preto para Starlink Mini com ventosas" fetchpriority="high">
-        <div class="color-badge">Preto & Branco disponíveis</div>
+        <div class="color-badge">Preto & Branco disponiveis</div>
       </div>
 
       <div class="hero-side">
         <div class="hero-intro-card reveal">
-          <span class="hero-intro-kicker">Uma solução pensada para o uso móvel</span>
-          <h3>Suporte + conversor em uma única peça.</h3>
-          <p>Instale sua Starlink Mini em uma superfície adequada e alimente o conjunto pela tomada 12V do veículo.</p>
-          <a class="cta hero-secondary-cta" href="#video">VER COMO FUNCIONA <span class="cta-arrow">↓</span></a>
-          <div class="hero-proof-row"><span>✓ Feito para Starlink Mini</span><span>✓ Cabo de 2 m incluso</span></div>
+          <span class="hero-intro-kicker">Uma solucao pensada para o uso movel</span>
+          <h3>Suporte + conversor em uma unica peca.</h3>
+          <p>Instale sua Starlink Mini em uma superficie adequada e alimente o conjunto pela tomada 12V do veiculo.</p>
+          <a class="cta hero-secondary-cta" href="#video">VER COMO FUNCIONA <span class="cta-arrow">v</span></a>
+          <div class="hero-proof-row"><span>Feito para Starlink Mini</span><span>Cabo incluso</span></div>
         </div>
       </div>
     </div>
@@ -687,32 +592,42 @@ body{
 </header>
 
 <section class="section soft">
+  <div class="container">
+    <div class="reveal center" style="max-width:680px;margin-left:auto;margin-right:auto">
+      <span class="kicker">Um problema que quem usa Starlink Mini no carro conhece bem</span>
+      <h2>Suporte genérico, cabo solto, conversor separado balançando no banco.</h2>
+      <p class="sub">A maioria das soluções pra usar a Starlink Mini fora de casa exige montar uma "gambiarra": um suporte que não foi feito pro formato da antena, um conversor de tensão avulso pendurado por aí, e mais um cabo pra ligar tudo isso. Na estrada, isso significa peça balançando, conector se soltando no buraco da pista, e a sensação de que a qualquer hora alguma coisa vai cair ou parar de funcionar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section light">
+  <div class="container">
+    <div class="story" style="grid-template-columns:1fr">
+      <div class="story-copy reveal" style="max-width:720px">
+        <span class="kicker">Por que a Starlink Mini precisa de um conversor</span>
+        <h2>O plug do seu carro entrega 12V. A Starlink Mini pede mais que isso.</h2>
+        <p class="sub">A tomada veicular (aquela do isqueiro/12V) fornece 12V — e a Starlink Mini foi projetada pra funcionar com uma tensão mais alta, em torno de 30V. Isso significa que ligar a antena direto numa tomada 12V, sem conversão, simplesmente não energiza o equipamento como deveria.</p>
+        <p class="sub" style="margin-top:12px">É pra resolver exatamente isso que existe o <strong style="color:#0b63bf">conversor Step-Up</strong>: um módulo eletrônico que eleva a tensão de 12V para 30V de forma estável, entregando à antena a energia que ela realmente precisa. A diferença do Conversor e Suporte Integrado da Star Shopp é simples — em vez de esse conversor ser mais uma peça solta espalhada pelo carro, ele já vem <strong style="color:#0b63bf">embutido dentro do próprio suporte</strong>, no mesmo formato que se encaixa na Starlink Mini.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
   <div class="container center">
     <div class="reveal">
-      <span class="kicker">Por que 2 em 1?</span>
+      <span class="kicker">O que muda na prática</span>
       <h2>Menos peças. Menos bagunça. Mais praticidade.</h2>
       <p class="sub">Tudo foi pensado para deixar a instalação da Starlink Mini mais organizada e fácil de levar para o próximo destino.</p>
     </div>
-
     <div class="features stagger">
-      <article class="feature">
-        <h3>Conversor integrado</h3><p>Converte a alimentação de 12V para 30V para a Starlink Mini, sem módulo externo separado.</p>
-      </article>
-      <article class="feature">
-        <h3>Fixação por ventosas</h3><p>Suporte com ventosas para uma instalação prática em superfícies compatíveis.</p>
-      </article>
-      <article class="feature">
-        <h3>Alimentação veicular</h3><p>Entrada pelo plug veicular 12V, com cabo veicular de 2 metros incluso no kit.</p>
-      </article>
-      <article class="feature">
-        <h3>Proteção em EVA</h3><p>EVA Premium de 3 mm ajuda a proteger a antena no ponto de contato com o suporte.</p>
-      </article>
-      <article class="feature">
-        <h3>Design 2 em 1</h3><p>Suporte e conversor integrados para reduzir componentes espalhados pela instalação.</p>
-      </article>
-      <article class="feature">
-        <h3>Uso móvel</h3><p>Ideal para carros, caminhões, motorhomes, embarcações e outras aplicações móveis.</p>
-      </article>
+      <article class="feature"><h3>Feito pra Starlink Mini</h3><p>Não é um suporte genérico adaptado — o encaixe foi desenhado especificamente pro formato da Starlink Mini, sem folga e sem risco de soltar.</p></article>
+      <article class="feature"><h3>Sem módulo solto</h3><p>O conversor Step-Up 12V→30V fica embutido no próprio suporte, eliminando aquele componente avulso balançando pelo carro.</p></article>
+      <article class="feature"><h3>Liga/desliga com LED</h3><p>O plug veicular tem botão liga/desliga e indicador luminoso — você sabe na hora se está energizando corretamente.</p></article>
+      <article class="feature"><h3>Ventosas de alta fixação</h3><p>Segura firme mesmo com a trepidação da estrada, sem ficar cedendo ao longo da viagem.</p></article>
+      <article class="feature"><h3>Proteção em EVA</h3><p>EVA Premium de 3 mm no ponto de contato, protegendo a antena de riscos e impactos leves.</p></article>
+      <article class="feature"><h3>Vai onde você for</h3><p>Funciona em qualquer aplicação com plug 12V: carro, caminhão, motorhome ou embarcação.</p></article>
     </div>
   </div>
 </section>
@@ -722,59 +637,58 @@ body{
     <div class="story">
       <div class="story-copy">
         <div class="reveal">
-          <span class="kicker">Feito para a Starlink Mini</span>
+          <span class="kicker">Especificações técnicas</span>
           <h2>Conecte. Fixe. Ligue. E siga viagem.</h2>
-          <p class="sub">A ideia é simples: uma única solução para suporte e conversão, com alimentação pelo plug veicular 12V.</p>
+          <p class="sub">O conversor Step-Up embutido entrega a tensão que a Starlink Mini precisa, com estabilidade e proteção contra sobrecorrente.</p>
         </div>
-
         <div class="spec-list" id="specList">
-          <div class="spec active"><span>Compatibilidade</span><b>Starlink Mini</b></div>
-          <div class="spec"><span>Conversão</span><b>12V → 30V</b></div>
-          <div class="spec"><span>Entrada</span><b>Plug veicular 12V</b></div>
+          <div class="spec active"><span>Compatibilidade</span><b>Starlink Mini (exclusiva)</b></div>
+          <div class="spec"><span>Conversor</span><b>12V para 30V, com proteção contra sobrecorrente</b></div>
+          <div class="spec"><span>Entrada</span><b>Plug veicular 12V, botão liga/desliga e LED</b></div>
           <div class="spec"><span>Saída</span><b>Conector fêmea DC</b></div>
-          <div class="spec"><span>Cabo veicular</span><b>2 metros — incluso</b></div>
+          <div class="spec"><span>Cabo veicular</span><b>2, 3 ou 5 metros - incluso</b></div>
           <div class="spec"><span>Cores</span><b>Preto e branco</b></div>
+          <div class="spec"><span>Garantia</span><b>Produto novo</b></div>
         </div>
       </div>
-
       <div class="spec-media reveal" id="specMedia">
         <img src="assets/support-transparent.png" alt="Suporte para Starlink Mini" loading="lazy">
-        <div class="media-note">Visual do produto • a antena Starlink Mini não acompanha o suporte.</div>
+        <div class="media-note">Visual do produto - a antena Starlink Mini nao acompanha o suporte.</div>
       </div>
     </div>
 
     <div class="steps stagger" style="margin-top:52px">
-      <article class="step">
-        <div class="step-num">1</div><div><h3>Fixe o suporte</h3><p>Use as ventosas em uma superfície adequada e faça o encaixe.</p></div>
-        <span class="stepline"></span>
-      </article>
-      <article class="step">
-        <div class="step-num">2</div><div><h3>Conecte a alimentação</h3><p>Use o cabo veicular de 2 metros que acompanha o kit, ligando-o ao plug veicular 12V e ao conversor integrado.</p></div>
-        <span class="stepline"></span>
-      </article>
-      <article class="step">
-        <div class="step-num">3</div><div><h3>Pronto para usar</h3><p>O conversor faz a conversão 12V → 30V para a Starlink Mini.</p></div>
-      </article>
+      <article class="step"><div class="step-num">1</div><div><h3>Fixe o suporte</h3><p>Use as ventosas em uma superficie adequada e faca o encaixe.</p></div><span class="stepline"></span></article>
+      <article class="step"><div class="step-num">2</div><div><h3>Conecte a alimentacao</h3><p>Use o cabo veicular que acompanha o kit, ligando-o ao plug veicular 12V e ao conversor integrado.</p></div><span class="stepline"></span></article>
+      <article class="step"><div class="step-num">3</div><div><h3>Pronto para usar</h3><p>O conversor faz a conversao 12V para 30V para a Starlink Mini.</p></div></article>
     </div>
 
     <div class="included-section reveal">
       <div class="included-copy">
-        <span class="kicker">Produto principal + cabo incluso</span>
+        <span class="kicker">O que vem na caixa</span>
         <h3>Suporte + conversor. Cabo incluso.</h3>
-        <p>O produto principal é o suporte 2 em 1 com conversor integrado, e o cabo veicular de 2 metros acompanha o kit para completar a instalação.</p>
-        <div class="included-badge">+ Cabo veicular de 2 metros — incluso no kit</div>
+        <p>Você recebe o suporte com o conversor já embutido, mais o cabo veicular completo, no comprimento que você escolher. Nada de comprar módulo separado ou adaptador depois.</p>
+        <div class="included-badge">+ Cabo veicular - incluso no kit</div>
       </div>
-      <div class="included-combo" aria-label="Suporte e conversor com cabo veicular de 2 metros incluso">
-        <div class="included-piece">
-          <span>SUPORTE + CONVERSOR</span>
-          <img src="assets/support-transparent.png" alt="Suporte 2 em 1 para Starlink Mini" loading="lazy">
-        </div>
+      <div class="included-combo" aria-label="Suporte e conversor com cabo veicular incluso">
+        <div class="included-piece"><span>SUPORTE + CONVERSOR</span><img src="assets/support-transparent.png" alt="Suporte 2 em 1 para Starlink Mini" loading="lazy"></div>
         <div class="combo-plus" aria-hidden="true">+</div>
-        <div class="included-piece cable-piece">
-          <span>CABO INCLUSO • 2 METROS</span>
-          <img src="assets/cable-transparent.png" alt="Cabo veicular de 2 metros incluso no kit" loading="lazy">
-        </div>
+        <div class="included-piece cable-piece"><span>CABO INCLUSO</span><img src="assets/cable-transparent.png" alt="Cabo veicular incluso no kit" loading="lazy"></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section light">
+  <div class="container">
+    <div class="reveal center" style="max-width:680px;margin-left:auto;margin-right:auto">
+      <span class="kicker">Encaixe perfeito</span>
+      <h2>Feito sob medida pra Starlink Mini — não um suporte genérico adaptado.</h2>
+      <p class="sub">O formato do encaixe segue exatamente o painel traseiro da Starlink Mini, então a fixação fica firme e alinhada, sem folga.</p>
+    </div>
+    <div class="fit-gallery stagger">
+      <div class="fit-shot"><img src="assets/encaixe-topo.png" alt="Suporte Star Shopp encaixado na Starlink Mini, vista de cima" loading="lazy"></div>
+      <div class="fit-shot"><img src="assets/encaixe-angulo.png" alt="Suporte Star Shopp encaixado na Starlink Mini, vista em ângulo" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -782,15 +696,14 @@ body{
 <section class="section soft" id="video">
   <div class="container center">
     <div class="reveal">
-      <span class="kicker">Vídeo demonstrativo</span>
-      <h2>Veja como funciona na prática.</h2>
-      <p class="sub"></p>
+      <span class="kicker">Video demonstrativo</span>
+      <h2>Veja como funciona na pratica.</h2>
     </div>
     <div class="video-wrap reveal">
       <div class="video-card">
         <video class="video-element" controls playsinline preload="metadata">
           <source src="assets/video-suporte-steel-1-preto.mp4" type="video/mp4">
-          Seu navegador não suporta a reprodução de vídeo.
+          Seu navegador nao suporta a reproducao de video.
         </video>
       </div>
     </div>
@@ -801,12 +714,12 @@ body{
   <div class="container">
     <div class="proof-head">
       <div class="reveal">
-        <span class="kicker">Confiança em diferentes plataformas</span>
-        <h2>Mais de 3 anos construindo confiança no mercado.</h2>
-        <p class="sub">A Star Shopp está presente em diferentes marketplaces, com histórico de vendas e indicadores de atendimento e entrega exibidos no Mercado Livre.</p>
+        <span class="kicker">Confianca em diferentes plataformas</span>
+        <h2>Mais de 3 anos construindo confianca no mercado.</h2>
+        <p class="sub">A Star Shopp esta presente em diferentes marketplaces, com historico de vendas e indicadores de atendimento e entrega exibidos no Mercado Livre.</p>
       </div>
       <div class="proof-stats stagger">
-        <div class="stat"><strong>3+ anos</strong><span>de atuação no mercado</span></div>
+        <div class="stat"><strong>3+ anos</strong><span>de atuacao no mercado</span></div>
         <div class="stat"><strong>+1.000</strong><span>vendas mostradas no Mercado Livre</span></div>
         <div class="stat"><strong>Gold</strong><span>status exibido no perfil</span></div>
       </div>
@@ -822,59 +735,148 @@ body{
 
     <div class="ml-proof-card reveal">
       <div class="ml-proof-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h12v10H3z"></path><path d="M15 10h3l3 3v4h-6z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><path d="M7 12h4"></path></svg></div>
-      <div class="ml-proof-copy"><span>INDICADORES VISÍVEIS NO PERFIL ENVIADO</span><strong>MercadoLíder Gold • Bom atendimento • Entrega no prazo</strong><small>A reputação exibida nas telas enviadas reforça a experiência de compra e entrega da Star Shopp no marketplace.</small></div>
+      <div class="ml-proof-copy"><span>INDICADORES VISIVEIS NO PERFIL ENVIADO</span><strong>MercadoLider Gold - Bom atendimento - Entrega no prazo</strong><small>A reputacao exibida nas telas enviadas reforca a experiencia de compra e entrega da Star Shopp no marketplace.</small></div>
       <div class="ml-proof-meter"><div class="meter-line"><span></span></div><small>Qualidade e entrega</small></div>
     </div>
 
     <div class="proof-grid stagger">
-      <article class="proof-card">
-        <div class="img-wrap"><img src="assets/ml-profile.webp" alt="Perfil da Star Shopp no Mercado Livre mostrando MercadoLíder Gold, mais de mil vendas, bom atendimento e entrega no prazo" loading="lazy"></div>
-        <div class="proof-meta"><strong>Perfil da Star Shopp</strong><span>MercadoLíder Gold • +1.000 vendas • bom atendimento • entrega no prazo.</span></div>
-      </article>
-      <article class="proof-card">
-        <div class="img-wrap"><img src="assets/ml-purchase.webp" alt="Tela do Mercado Livre com dados da Star Shopp, mais de mil vendas, devolução grátis e compra garantida" loading="lazy"></div>
-        <div class="proof-meta"><strong>Compra protegida</strong><span>Print do Mercado Livre com dados de vendas e recursos de proteção ao comprador.</span></div>
-      </article>
-      <article class="proof-card">
-        <div class="img-wrap"><img src="assets/ml-shop.webp" alt="Página da Star Shopp no aplicativo do Mercado Livre" loading="lazy"></div>
-        <div class="proof-meta"><strong>Presença no marketplace</strong><span>Visual real do perfil Starshopp dentro do aplicativo do Mercado Livre.</span></div>
-      </article>
+      <article class="proof-card"><div class="img-wrap"><img src="assets/ml-profile.webp" alt="Perfil da Star Shopp no Mercado Livre" loading="lazy"></div><div class="proof-meta"><strong>Perfil da Star Shopp</strong><span>MercadoLider Gold - +1.000 vendas - bom atendimento - entrega no prazo.</span></div></article>
+      <article class="proof-card"><div class="img-wrap"><img src="assets/ml-purchase.webp" alt="Tela do Mercado Livre com dados da Star Shopp" loading="lazy"></div><div class="proof-meta"><strong>Compra protegida</strong><span>Print do Mercado Livre com dados de vendas e recursos de protecao ao comprador.</span></div></article>
+      <article class="proof-card"><div class="img-wrap"><img src="assets/ml-shop.webp" alt="Pagina da Star Shopp no aplicativo do Mercado Livre" loading="lazy"></div><div class="proof-meta"><strong>Presenca no marketplace</strong><span>Visual real do perfil Starshopp dentro do aplicativo do Mercado Livre.</span></div></article>
     </div>
 
-    <div class="notice reveal" style="margin-top:18px"><strong>Por que o preço aqui é menor que no Mercado Livre?</strong> Marketplaces como o Mercado Livre cobram taxas sobre cada venda, o que encarece o produto para o comprador. Comprando direto no site oficial da Star Shopp, sem essas taxas de plataforma, conseguimos repassar o desconto para você — com a mesma garantia e segurança.</div>
+    <div class="notice reveal" style="margin-top:18px"><strong>Por que o preco aqui e menor que no Mercado Livre?</strong> Marketplaces como o Mercado Livre cobram taxas sobre cada venda, o que encarece o produto para o comprador. Comprando direto no site oficial da Star Shopp, sem essas taxas de plataforma, conseguimos repassar o desconto para voce - com a mesma garantia e seguranca.</div>
 
     <div class="marketplace-trust stagger">
-      <div class="marketplace-trust-item"><span class="trust-check">✓</span><div><strong>MercadoLíder Gold</strong><small>status mostrado no perfil enviado</small></div></div>
-      <div class="marketplace-trust-item"><span class="trust-check">✓</span><div><strong>Bom atendimento</strong><small>indicador visível no Mercado Livre</small></div></div>
-      <div class="marketplace-trust-item"><span class="trust-check">✓</span><div><strong>Entrega no prazo</strong><small>indicador visível no Mercado Livre</small></div></div>
-      <div class="marketplace-trust-item"><span class="trust-check">✓</span><div><strong>Compra garantida</strong><small>proteção mostrada na plataforma</small></div></div>
+      <div class="marketplace-trust-item"><span class="trust-check">v</span><div><strong>MercadoLider Gold</strong><small>status mostrado no perfil enviado</small></div></div>
+      <div class="marketplace-trust-item"><span class="trust-check">v</span><div><strong>Bom atendimento</strong><small>indicador visivel no Mercado Livre</small></div></div>
+      <div class="marketplace-trust-item"><span class="trust-check">v</span><div><strong>Entrega no prazo</strong><small>indicador visivel no Mercado Livre</small></div></div>
+      <div class="marketplace-trust-item"><span class="trust-check">v</span><div><strong>Compra garantida</strong><small>protecao mostrada na plataforma</small></div></div>
     </div>
 
-    <div class="notice reveal"><strong>Importante:</strong> o produto principal é o suporte + conversor integrado e o cabo veicular de 2 metros <strong>acompanha o kit</strong>. <strong>A antena Starlink Mini não acompanha.</strong></div>
+    <div class="notice reveal"><strong>Importante:</strong> o produto principal e o suporte + conversor integrado e o cabo veicular <strong>acompanha o kit</strong>. <strong>A antena Starlink Mini nao acompanha.</strong></div>
   </div>
 </section>
 
 <section class="offer-section" id="oferta">
   <div class="container center">
     <div class="reveal">
-      <span class="kicker">Sua próxima instalação começa aqui</span>
-      <h2>Leve a solução 2 em 1 para a sua Starlink Mini.</h2>
-      <p class="sub">Uma única peça, alimentação pelo plug veicular 12V e menos componentes para organizar.</p>
+      <span class="kicker">Sua proxima instalacao comeca aqui</span>
+      <h2>Leve a solucao 2 em 1 para a sua Starlink Mini.</h2>
+      <p class="sub">Uma unica peca, alimentacao pelo plug veicular 12V e menos componentes para organizar.</p>
     </div>
 
     <div class="final-offer reveal">
-      <div class="offer-top"><span class="offer-tag">Oferta atual</span><span class="old">De R$ 379,00</span></div>
-      <span class="installment-label">12x de <em>no cartão</em></span>
-      <div class="price-row"><div class="price" aria-label="R$ 42,51"><span class="price-currency">R$</span><span class="price-major">42</span><span class="price-dec">,51</span></div></div>
-      <div class="pix">ou <strong>R$ 312,62 no Pix</strong></div>
-      <a class="cta" href="https://checkout.starshopp.net/VCCL1O8SD9FS">QUERO GARANTIR O MEU AGORA <span class="cta-arrow">→</span></a>
-      <div class="guarantees">
-        <div class="guarantee">✓ Compra protegida</div>
-        <div class="guarantee">✓ Envio para todo o Brasil</div>
-        <div class="guarantee">✓ Compatível com Starlink Mini</div>
-        <div class="guarantee">✓ Cabo veicular de 2 m incluso</div>
+      <div class="buybox">
+        <div class="buybox-photo">
+          <div class="buybox-photo-badge">Foto do produto</div>
+          <img id="variantPhoto" src="assets/buybox-preto.png" alt="Suporte Star Shopp na cor selecionada">
+        </div>
+
+        <div class="buybox-info">
+          <div class="variant-block" style="margin-top:0">
+            <div class="variant-group">
+              <div class="variant-label"><span>Cor</span><b id="colorLabelOut">Preto</b></div>
+              <div class="variant-options" id="colorOptions" role="radiogroup" aria-label="Cor do suporte">
+                <label class="variant-swatch dot-black">
+                  <input type="radio" name="variant-color" value="preto" checked>
+                  <span class="dot"></span> Preto
+                </label>
+                <label class="variant-swatch dot-white">
+                  <input type="radio" name="variant-color" value="branco">
+                  <span class="dot"></span> Branco
+                </label>
+              </div>
+            </div>
+            <div class="variant-group">
+              <div class="variant-label"><span>Cabo veicular</span><b id="lengthLabelOut">2 metros</b></div>
+              <div class="variant-options" id="lengthOptions" role="radiogroup" aria-label="Tamanho do cabo veicular">
+                <label class="variant-swatch">
+                  <input type="radio" name="variant-length" value="2m" data-price="319" checked>
+                  2 metros
+                </label>
+                <label class="variant-swatch">
+                  <input type="radio" name="variant-length" value="3m" data-price="329">
+                  3 metros <span class="len-diff">+R$10</span>
+                </label>
+                <label class="variant-swatch">
+                  <input type="radio" name="variant-length" value="5m" data-price="359">
+                  5 metros <span class="len-diff">+R$40</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="offer-top" style="justify-content:flex-start"><span class="offer-tag">Oferta atual</span></div>
+          <div class="price-row" style="justify-content:flex-start;align-items:baseline;flex-wrap:wrap;gap:7px 8px">
+            <span class="price-tag">12x de</span>
+            <div class="price" aria-label="preço"><span class="price-currency">R$</span><span class="price-major" id="priceMajor">35</span><span class="price-dec" id="priceDec">,78</span></div>
+            <span class="price-tag">no cartão</span>
+          </div>
+          <div class="pix" style="text-align:left">ou <strong id="pixPrice">R$ 319,00</strong> no Pix</div>
+          <a class="cta" id="ctaOferta" href="https://checkout.starshopp.net/VCCL1O8SD9FS">QUERO GARANTIR O MEU AGORA <span class="cta-arrow">→</span></a>
+          <div class="guarantees">
+            <div class="guarantee">Compra protegida</div>
+            <div class="guarantee">Envio para todo o Brasil — até 15 dias úteis</div>
+            <div class="guarantee">Compatível com Starlink Mini</div>
+            <div class="guarantee" id="guaranteeCable">Cabo veicular de 2 m incluso</div>
+          </div>
+        </div>
       </div>
       <div class="offer-note">O pagamento e a finalização da compra acontecem no site da Star Shopp.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="depoimentos">
+  <div class="container">
+    <div class="reveal center">
+      <span class="kicker">O que dizem nossos clientes</span>
+      <h2>Avaliações reais de compradores.</h2>
+      <p class="sub">Avaliações de compradores verificados nos nossos canais de venda.</p>
+    </div>
+
+    <div class="testi-wrap reveal" style="margin-top:32px;position:relative;max-width:720px;margin-left:auto;margin-right:auto">
+      <div class="testi-track" id="testiTrack" style="display:flex;overflow:hidden;border-radius:22px">
+        <article class="testi-card" style="flex:0 0 100%;padding:26px;background:#0c1925;border:1px solid rgba(255,255,255,.08)">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(17,231,162,.14);display:grid;place-items:center;font-weight:900;color:#11e7a2">✓</div>
+            <div><strong style="display:block;font-size:13px">Compra verificada</strong><span style="font-size:11px;color:#8aa0b2">★★★★★</span></div>
+          </div>
+          <p style="margin:0;color:#cfdce7;font-size:14px;line-height:1.6">"Chegou bem embalado e antes do prazo. Já coloquei no carro e gostei demais, ficou bem firme no vidro. Agora ficou bem mais fácil levar a Starlink nas viagens."</p>
+        </article>
+        <article class="testi-card" style="flex:0 0 100%;padding:26px;background:#0c1925;border:1px solid rgba(255,255,255,.08)">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(17,231,162,.14);display:grid;place-items:center;font-weight:900;color:#11e7a2">✓</div>
+            <div><strong style="display:block;font-size:13px">Compra verificada</strong><span style="font-size:11px;color:#8aa0b2">★★★★★</span></div>
+          </div>
+          <p style="margin:0;color:#cfdce7;font-size:14px;line-height:1.6">"Rapaz, gostei do suporte. Pensei que ia ser meio complicado de colocar, mas foi bem simples. As ventosas seguram muito bem e o conversor funcionou certinho."</p>
+        </article>
+        <article class="testi-card" style="flex:0 0 100%;padding:26px;background:#0c1925;border:1px solid rgba(255,255,255,.08)">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(17,231,162,.14);display:grid;place-items:center;font-weight:900;color:#11e7a2">✓</div>
+            <div><strong style="display:block;font-size:13px">Compra verificada</strong><span style="font-size:11px;color:#8aa0b2">★★★★★</span></div>
+          </div>
+          <p style="margin:0;color:#cfdce7;font-size:14px;line-height:1.6">"Comprei para usar na estrada e até agora está perfeito. Não fica sambando no vidro e a Starlink fica bem presa. Para quem viaja bastante, facilita muito."</p>
+        </article>
+        <article class="testi-card" style="flex:0 0 100%;padding:26px;background:#0c1925;border:1px solid rgba(255,255,255,.08)">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(17,231,162,.14);display:grid;place-items:center;font-weight:900;color:#11e7a2">✓</div>
+            <div><strong style="display:block;font-size:13px">Compra verificada</strong><span style="font-size:11px;color:#8aa0b2">★★★★★</span></div>
+          </div>
+          <p style="margin:0;color:#cfdce7;font-size:14px;line-height:1.6">"Gostei da qualidade, principalmente do acabamento. Dá pra ver que é um produto bem feito. Instalei na minha Mini e ficou muito bom no carro."</p>
+        </article>
+        <article class="testi-card" style="flex:0 0 100%;padding:26px;background:#0c1925;border:1px solid rgba(255,255,255,.08)">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(17,231,162,.14);display:grid;place-items:center;font-weight:900;color:#11e7a2">✓</div>
+            <div><strong style="display:block;font-size:13px">Compra verificada</strong><span style="font-size:11px;color:#8aa0b2">★★★★★</span></div>
+          </div>
+          <p style="margin:0;color:#cfdce7;font-size:14px;line-height:1.6">"Chegou aqui e já fui testar. Funcionou de primeira. O que mais gostei foi não precisar ficar improvisando suporte e cabo toda vez que vou sair. Ficou bem mais prático."</p>
+        </article>
+      </div>
+      <button id="testiPrev" aria-label="Avaliação anterior" style="position:absolute;left:-6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:rgba(4,10,16,.82);color:#fff;cursor:pointer">&lt;</button>
+      <button id="testiNext" aria-label="Próxima avaliação" style="position:absolute;right:-6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:rgba(4,10,16,.82);color:#fff;cursor:pointer">&gt;</button>
+      <div id="testiDots" style="display:flex;justify-content:center;gap:7px;margin-top:16px"></div>
     </div>
   </div>
 </section>
@@ -903,35 +905,50 @@ body{
       <h2>Perguntas frequentes</h2>
     </div>
     <div class="faq reveal">
-      <details><summary>Esse produto acompanha a antena Starlink Mini?</summary><p>Não. O kit é composto pelo suporte com conversor integrado e pelo cabo veicular de 2 metros. A antena Starlink Mini não acompanha o produto.</p></details>
-      <details><summary>Como é feita a alimentação?</summary><p>A alimentação é feita pelo plug veicular 12V conectado à tomada do veículo. O conversor integrado faz a conversão para 30V.</p></details>
-      <details><summary>Serve para qualquer Starlink?</summary><p>Não. Este modelo foi desenvolvido especificamente para a Starlink Mini.</p></details>
-      <details><summary>O cabo veicular acompanha o produto?</summary><p>Sim. O cabo veicular de 2 metros acompanha o kit junto com o suporte e o conversor integrado.</p></details>
-      <details><summary>Quais cores estão disponíveis?</summary><p>Preto e branco.</p></details>
+      <details><summary>Esse produto acompanha a antena Starlink Mini?</summary><p>Nao. O kit e composto pelo suporte com conversor integrado e pelo cabo veicular. A antena Starlink Mini nao acompanha o produto.</p></details>
+      <details><summary>Como e feita a alimentacao?</summary><p>A alimentacao e feita pelo plug veicular 12V conectado a tomada do veiculo. O conversor integrado faz a conversao para 30V.</p></details>
+      <details><summary>Serve para qualquer Starlink?</summary><p>Nao. Este modelo foi desenvolvido especificamente para a Starlink Mini.</p></details>
+      <details><summary>O cabo veicular acompanha o produto?</summary><p>Sim. O cabo veicular acompanha o kit junto com o suporte e o conversor integrado, no tamanho escolhido (2, 3 ou 5 metros).</p></details>
+      <details><summary>Quais cores estao disponiveis?</summary><p>Preto e branco.</p></details>
+      <details><summary>Qual o prazo de entrega?</summary><p>O prazo médio de entrega é de até 15 dias úteis para todo o Brasil, podendo variar conforme a região e a transportadora selecionada no checkout.</p></details>
+      <details><summary>Posso trocar ou devolver o produto?</summary><p>Sim. Você tem até 7 dias corridos após o recebimento para desistir da compra, sem precisar justificar, com reembolso integral (direito de arrependimento previsto no Código de Defesa do Consumidor). Também há garantia contra defeitos de fabricação. Veja todos os detalhes na <a href="trocas-e-devolucao.html" style="color:#8fc4ff">Política de Trocas e Devolução</a>.</p></details>
+      <details><summary>Essa loja é confiável? Onde encontro os dados da empresa?</summary><p>A Star Shopp é operada pela STAR SHOPP LTDA, CNPJ 59.685.751/0001-31, com sede em Goiânia/GO. Os dados completos estão no rodapé desta página, junto com nossos Termos de Uso e Política de Privacidade.</p></details>
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <strong>STAR SHOPP</strong><br>
-    Tecnologia, mobilidade e conectividade.<br><br>
-    Página de campanha • 2026
+<footer class="footer" style="padding-top:44px">
+  <div class="container" style="text-align:left;max-width:640px">
+    <div style="text-align:center;margin-bottom:22px">
+      <strong style="font-size:14px">STAR SHOPP</strong><br>
+      Tecnologia, mobilidade e conectividade.
+    </div>
+    <div style="border-top:1px solid var(--line);padding-top:18px;font-size:11px;line-height:1.9;color:#8695a1;text-align:center">
+      STAR SHOPP LTDA — CNPJ 59.685.751/0001-31<br>
+      Av. Anhanguera, 8044, Quadra 83A Lote 1E, Setor Campinas — Goiânia/GO — CEP 74.503-100<br>
+      Contato: <a href="mailto:starshopp.net@gmail.com" style="color:#8695a1">starshopp.net@gmail.com</a><br>
+      Envio para todo o Brasil • Prazo médio de entrega: até 15 dias úteis
+    </div>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:11px">
+      <a href="termos.html" style="color:#8fc4ff">Termos de uso</a>
+      <a href="privacidade.html" style="color:#8fc4ff">Política de privacidade</a>
+      <a href="trocas-e-devolucao.html" style="color:#8fc4ff">Trocas, devolução e arrependimento</a>
+    </div>
+    <div style="text-align:center;margin-top:18px;color:#556270">Página de campanha - 2026</div>
   </div>
 </footer>
 
 <div class="purchase-popup" id="purchasePopup">
-  <div class="purchase-popup-icon">✓</div>
+  <div class="purchase-popup-icon">v</div>
   <div class="purchase-popup-text" id="purchasePopupText"></div>
 </div>
 
 <div class="sticky" id="sticky">
   <div class="sticky-inner">
-    <div class="sticky-price"><small>12x de</small><b>R$ 42,51</b></div>
-    <a class="cta" href="https://checkout.starshopp.net/VCCL1O8SD9FS">QUERO O MEU AGORA <span class="cta-arrow">→</span></a>
+    <div class="sticky-price"><small>12x de</small><b id="stickyPrice">R$ 35,78</b></div>
+    <a class="cta" id="ctaSticky" href="https://checkout.starshopp.net/VCCL1O8SD9FS">QUERO O MEU AGORA <span class="cta-arrow">-&gt;</span></a>
   </div>
 </div>
-
 <script>
 (function(){
   const revealEls = document.querySelectorAll('.reveal, .stagger');
@@ -985,10 +1002,9 @@ body{
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
 
-  // Popup de compras recentes
-  const firstNames = ['Carlos','Marcos','Fernanda','Juliana','Rafael','Bruno','Camila','Patrícia','Diego','Larissa','Eduardo','Vanessa','Thiago','Amanda','Rodrigo','Priscila','André','Bianca','Gustavo','Renata','Leandro','Fabiana','Marcelo','Aline','Felipe','Débora','Ricardo','Tatiane','Gabriel','Simone'];
+  const firstNames = ['Carlos','Marcos','Fernanda','Juliana','Rafael','Bruno','Camila','Patricia','Diego','Larissa','Eduardo','Vanessa','Thiago','Amanda','Rodrigo','Priscila','Andre','Bianca','Gustavo','Renata','Leandro','Fabiana','Marcelo','Aline','Felipe','Debora','Ricardo','Tatiane','Gabriel','Simone'];
   const lastInitials = ['S.','M.','R.','A.','C.','L.','P.','F.','O.','B.','T.','G.','N.','D.'];
-  const locations = ['São Paulo, SP','Goiânia, GO','Curitiba, PR','Belo Horizonte, MG','Porto Alegre, RS','Salvador, BA','Brasília, DF','Campinas, SP','Fortaleza, CE','Recife, PE','Florianópolis, SC','Ribeirão Preto, SP','Uberlândia, MG','Londrina, PR','Manaus, AM','Vitória, ES','Cuiabá, MT','Anápolis, GO','Sorocaba, SP','Joinville, SC'];
+  const locations = ['Sao Paulo, SP','Goiania, GO','Curitiba, PR','Belo Horizonte, MG','Porto Alegre, RS','Salvador, BA','Brasilia, DF','Campinas, SP','Fortaleza, CE','Recife, PE','Florianopolis, SC','Ribeirao Preto, SP','Uberlandia, MG','Londrina, PR','Manaus, AM','Vitoria, ES','Cuiaba, MT','Anapolis, GO','Sorocaba, SP','Joinville, SC'];
 
   const popupEl = document.querySelector('#purchasePopup');
   const popupTextEl = document.querySelector('#purchasePopupText');
@@ -1005,30 +1021,140 @@ body{
     clearTimeout(popupTimer);
     popupTimer = setTimeout(()=>{ popupEl.classList.remove('show'); }, 4000);
   }
-
   setTimeout(showRandomPurchase, 2500);
   setInterval(showRandomPurchase, 7000);
-})();
-</script>
-<script>
-(function () {
-  const params = new URLSearchParams(window.location.search);
 
-  if (!params.toString()) return;
+  // Variantes: cor + tamanho do cabo, com preco dinamico
+  // ATENCAO: os links abaixo sao placeholders (todos apontam pro mesmo link
+  // atual). Cada combinacao de cor+tamanho precisa apontar para o link de
+  // checkout do Vega travado NAQUELA variante/preco especifica, senao o
+  // valor cobrado no checkout pode nao bater com o valor mostrado aqui.
+  const CHECKOUT_LINKS = {
+    'branco-2m': 'https://checkout.starshopp.net/VCCL1O8SD9JB',
+    'branco-3m': 'https://checkout.starshopp.net/VCCL1O8SD9JJ',
+    'branco-5m': 'https://checkout.starshopp.net/VCCL1O8SD9JK',
+    'preto-2m':  'https://checkout.starshopp.net/VCCL1O8SD9JL',
+    'preto-3m':  'https://checkout.starshopp.net/VCCL1O8SD9JM',
+    'preto-5m':  'https://checkout.starshopp.net/VCCL1O8SD9JN'
+  };
+  // O valor de cada comprimento (319 / 329 / 359) É o preço real no Pix,
+  // exatamente como informado — não aplicamos nenhum desconto adicional
+  // em cima dele. O 12x é esse mesmo valor rateado com a MESMA proporção
+  // que já existia entre o 12x total e o Pix nesta página (510,12 / 312,62),
+  // ou seja, o card cobre o custo do parcelamento, sem inventar um valor
+  // "de/por" fictício. Ajuste CARD_RATIO se a taxa real do seu
+  // cartão/Vega for diferente.
+  const CARD_RATIO = 510.12/312.62;
 
-  const checkoutUrl = 'https://checkout.starshopp.net/VCCL1O8SD9FS';
+  const PHOTOS = {
+    preto:  'assets/buybox-preto.png',
+    branco: 'assets/buybox-branco.png'
+  };
 
-  document.querySelectorAll('a[href="' + checkoutUrl + '"]').forEach(function (link) {
-    const url = new URL(link.href);
+  function currentVariant(){
+    const color = document.querySelector('input[name="variant-color"]:checked').value;
+    const lengthInput = document.querySelector('input[name="variant-length"]:checked');
+    return { color, length: lengthInput.value, pix: parseFloat(lengthInput.dataset.price) };
+  }
 
-    params.forEach(function (value, key) {
-      url.searchParams.set(key, value);
-    });
+  function updateOffer(){
+    const { color, length, pix } = currentVariant();
+    const cardTotal = pix * CARD_RATIO;
+    const cardParcel = cardTotal/12;
+    const lengthLabel = length.replace('m',' metros');
 
-    link.href = url.toString();
+    document.querySelector('#colorLabelOut').textContent = color === 'preto' ? 'Preto' : 'Branco';
+    document.querySelector('#lengthLabelOut').textContent = lengthLabel;
+    const parts = cardParcel.toFixed(2).split('.');
+    document.querySelector('#priceMajor').textContent = parts[0];
+    document.querySelector('#priceDec').textContent = ','+parts[1];
+    document.querySelector('#pixPrice').textContent = 'R$ ' + pix.toFixed(2).replace('.',',');
+    document.querySelector('#stickyPrice').textContent = 'R$ ' + cardParcel.toFixed(2).replace('.',',');
+    document.querySelector('#guaranteeCable').textContent = 'Cabo veicular de ' + lengthLabel + ' incluso';
+
+    const photo = document.querySelector('#variantPhoto');
+    if(photo) photo.src = PHOTOS[color];
+
+    const key = color+'-'+length;
+    const baseLink = CHECKOUT_LINKS[key] || CHECKOUT_LINKS['preto-2m'];
+    const pageParams = new URLSearchParams(window.location.search);
+    const finalUrl = new URL(baseLink);
+    pageParams.forEach(function(value, k){ finalUrl.searchParams.set(k, value); });
+    document.querySelector('#ctaOferta').href = finalUrl.toString();
+    document.querySelector('#ctaSticky').href = finalUrl.toString();
+  }
+
+  document.querySelectorAll('input[name="variant-color"], input[name="variant-length"]').forEach(inp=>{
+    inp.addEventListener('change', updateOffer);
   });
+  updateOffer();
 })();
 </script>
 
+<script>
+/* Carrossel de avaliacoes — isolado dos demais scripts de propósito, para
+   um erro em outro trecho da página nunca conseguir travar esta parte.
+   Rola sozinho, infinito, com 6.5s de intervalo (tempo de leitura), e pausa
+   ao passar o mouse ou ao usar as setas. */
+(function(){
+  try {
+    var track = document.getElementById('testiTrack');
+    var dotsWrap = document.getElementById('testiDots');
+    var prevBtn = document.getElementById('testiPrev');
+    var nextBtn = document.getElementById('testiNext');
+    if(!track || !dotsWrap) return;
+
+    var cards = Array.prototype.slice.call(track.children);
+    if(cards.length === 0) return;
+
+    var idx = 0;
+    var auto = null;
+    var READ_DELAY_MS = 6500;
+
+    cards.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Ir para avaliação ' + (i + 1));
+      dot.style.cssText = 'width:7px;height:7px;border-radius:50%;border:0;background:rgba(255,255,255,.22);cursor:pointer;padding:0';
+      dot.addEventListener('click', function(){ goTo(i); restartAuto(); });
+      dotsWrap.appendChild(dot);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    function render(){
+      track.style.transition = 'transform .5s cubic-bezier(.22,1,.36,1)';
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      dots.forEach(function(d, i){ d.style.background = i === idx ? 'var(--blue)' : 'rgba(255,255,255,.22)'; });
+    }
+    function goTo(i){
+      idx = ((i % cards.length) + cards.length) % cards.length;
+      render();
+    }
+    function startAuto(){
+      auto = setInterval(function(){ goTo(idx + 1); }, READ_DELAY_MS);
+    }
+    function restartAuto(){
+      clearInterval(auto);
+      startAuto();
+    }
+
+    if(prevBtn) prevBtn.addEventListener('click', function(){ goTo(idx - 1); restartAuto(); });
+    if(nextBtn) nextBtn.addEventListener('click', function(){ goTo(idx + 1); restartAuto(); });
+
+    var wrap = track.closest('.testi-wrap');
+    if(wrap){
+      wrap.addEventListener('mouseenter', function(){ clearInterval(auto); });
+      wrap.addEventListener('mouseleave', startAuto);
+      wrap.addEventListener('touchstart', function(){ clearInterval(auto); }, {passive:true});
+      wrap.addEventListener('touchend', restartAuto, {passive:true});
+    }
+
+    render();
+    startAuto();
+  } catch(err){
+    console.error('Carrossel de avaliacoes: erro ao iniciar', err);
+  }
+})();
+</script>
 </body>
 </html>

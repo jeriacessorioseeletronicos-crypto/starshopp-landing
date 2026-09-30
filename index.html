@@ -604,6 +604,160 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
   .customer-proof-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 }
 
+
+/* Visual bridge: problema -> o que muda na prática */
+.problem-visual-bridge{
+  padding: 18px 0 54px;
+  background:#07131f;
+  position:relative;
+}
+.problem-visual-bridge:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:linear-gradient(180deg,transparent,rgba(20,131,245,.24),transparent);
+  transform:translateX(-50%);
+  pointer-events:none;
+}
+.problem-visual-card{
+  position:relative;
+  max-width:920px;
+  margin:0 auto;
+  border:1px solid rgba(20,131,245,.24);
+  border-radius:30px;
+  overflow:hidden;
+  background:#081725;
+  box-shadow:0 28px 70px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.025) inset;
+}
+.problem-visual-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(4,8,13,.02) 45%,rgba(4,8,13,.58) 100%);
+  pointer-events:none;
+}
+.problem-visual-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:560px;
+  object-fit:cover;
+  object-position:center;
+}
+.problem-visual-caption{
+  position:absolute;
+  z-index:2;
+  left:22px;
+  right:22px;
+  bottom:20px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+}
+.problem-visual-label{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(4,8,13,.78);
+  border:1px solid rgba(20,131,245,.35);
+  backdrop-filter:blur(10px);
+  color:#dcecf9;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.problem-visual-note{
+  max-width:430px;
+  margin:0;
+  color:#fff;
+  font-size:14px;
+  line-height:1.35;
+  font-weight:800;
+  text-align:right;
+  text-shadow:0 2px 14px rgba(0,0,0,.7);
+}
+.problem-visual-next{
+  width:34px;
+  height:34px;
+  margin:18px auto 0;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#77b9ff;
+  border:1px solid rgba(20,131,245,.25);
+  background:rgba(20,131,245,.06);
+  font-size:17px;
+}
+@media (max-width:759px){
+  .problem-visual-bridge{padding:4px 0 42px}
+  .problem-visual-card{border-radius:22px}
+  .problem-visual-image{min-height:270px;max-height:430px;object-fit:cover}
+  .problem-visual-caption{left:14px;right:14px;bottom:14px;display:block}
+  .problem-visual-label{font-size:9px;padding:7px 10px}
+  .problem-visual-note{margin-top:9px;font-size:12px;max-width:90%;text-align:left}
+  .problem-visual-next{margin-top:14px}
+}
+
+/* Visual bridge: o que muda -> especificações técnicas */
+
+/* Visual bridge: o que muda -> especificações técnicas */
+.practical-visual-bridge{
+  padding:18px 0 54px;background:#07131f;position:relative;
+}
+.practical-visual-bridge:before{
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;
+  background:linear-gradient(180deg,transparent,rgba(20,131,245,.24),transparent);
+  transform:translateX(-50%);pointer-events:none;
+}
+.practical-visual-card{
+  position:relative;max-width:920px;margin:0 auto;overflow:hidden;
+  border:1px solid rgba(20,131,245,.24);border-radius:30px;background:#081725;
+  box-shadow:0 28px 70px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.025) inset;
+}
+.practical-visual-card:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(4,8,13,.01) 48%,rgba(4,8,13,.52) 100%);
+  pointer-events:none;
+}
+.practical-visual-image{
+  display:block;width:100%;height:auto;max-height:560px;
+  object-fit:cover;object-position:center;
+}
+.practical-visual-caption{
+  position:absolute;z-index:2;left:22px;right:22px;bottom:20px;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+}
+.practical-visual-label{
+  display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;
+  background:rgba(4,8,13,.78);border:1px solid rgba(20,131,245,.35);
+  backdrop-filter:blur(10px);color:#dcecf9;font-size:11px;font-weight:900;
+  letter-spacing:.08em;text-transform:uppercase;
+}
+.practical-visual-note{
+  max-width:430px;margin:0;color:#fff;font-size:14px;line-height:1.35;
+  font-weight:800;text-align:right;text-shadow:0 2px 14px rgba(0,0,0,.7);
+}
+.practical-visual-next{
+  width:34px;height:34px;margin:18px auto 0;border-radius:50%;
+  display:grid;place-items:center;color:#77b9ff;border:1px solid rgba(20,131,245,.25);
+  background:rgba(20,131,245,.06);font-size:17px;
+}
+@media (max-width:759px){
+  .practical-visual-bridge{padding:4px 0 42px}
+  .practical-visual-card{border-radius:22px}
+  .practical-visual-image{min-height:270px;max-height:430px;object-fit:cover}
+  .practical-visual-caption{left:14px;right:14px;bottom:14px;display:block}
+  .practical-visual-label{font-size:9px;padding:7px 10px}
+  .practical-visual-note{margin-top:9px;font-size:12px;max-width:90%;text-align:left}
+  .practical-visual-next{margin-top:14px}
+}
+
 </style>
 </head>
 <body>
@@ -653,6 +807,23 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
   </div>
 </section>
 
+<section class="problem-visual-bridge" aria-label="Exemplo da instalação no carro">
+  <div class="container">
+    <div class="problem-visual-card reveal">
+      <img
+        class="problem-visual-image"
+        src="assets/instalacao-carro-starlink.jpg"
+        alt="Instalação de Starlink Mini no carro com conversor e cabos aparentes"
+        loading="lazy">
+      <div class="problem-visual-caption">
+        <span class="problem-visual-label">Na prática</span>
+        <p class="problem-visual-note">É exatamente esse tipo de instalação cheia de fios e componentes soltos que a solução integrada foi pensada para organizar.</p>
+      </div>
+    </div>
+    <div class="problem-visual-next" aria-hidden="true">↓</div>
+  </div>
+</section>
+
 <section class="section soft">
   <div class="container center">
     <div class="reveal">
@@ -668,6 +839,23 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
       <article class="feature"><h3>Proteção em EVA</h3><p>EVA Premium de 3 mm no ponto de contato, protegendo a antena de riscos e impactos leves.</p></article>
       <article class="feature"><h3>Vai onde você for</h3><p>Funciona em qualquer aplicação com plug 12V: carro, caminhão, motorhome ou embarcação.</p></article>
     </div>
+  </div>
+</section>
+
+<section class="practical-visual-bridge" aria-label="Visão do suporte integrado">
+  <div class="container">
+    <div class="practical-visual-card reveal">
+      <img
+        class="practical-visual-image"
+        src="assets/suporte-integrado-starlink.jpg"
+        alt="Suporte integrado Star Shopp para Starlink Mini com ventosas"
+        loading="lazy">
+      <div class="practical-visual-caption">
+        <span class="practical-visual-label">Solução integrada</span>
+        <p class="practical-visual-note">Uma única estrutura para deixar a Starlink Mini mais firme, organizada e pronta para o uso.</p>
+      </div>
+    </div>
+    <div class="practical-visual-next" aria-hidden="true">↓</div>
   </div>
 </section>
 

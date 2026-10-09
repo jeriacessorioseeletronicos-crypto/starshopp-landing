@@ -1016,23 +1016,7 @@ scroll-snap-align:start;
 }
 </style>
 
-/* Ajuste pontual do hero: remover os cards pequenos e eliminar o espaço sobrando */
-.art-badge,.color-badge{display:none!important}
-.hero-floating{min-height:0!important;height:auto!important;margin:18px auto 0!important;width:100%;max-width:900px}
-.hero-floating img[src*="interior-starlink-carro"]{
-  position:relative!important;left:auto!important;top:auto!important;
-  display:block!important;width:100%!important;max-width:100%!important;
-  max-height:none!important;height:auto!important;object-fit:contain!important;
-  margin:0 auto!important;transform:none!important;animation:none!important;
-}
-@media(max-width:759px){
-  .hero-floating{min-height:0!important;height:auto!important;margin:12px auto 0!important}
-  .hero-floating img[src*="interior-starlink-carro"]{width:100%!important;max-width:100%!important}
-}
 
-<style>
-
-</style>
 <style>
 
 /* Correção pontual: somente o par de imagens da seção "A mudança" */
@@ -1091,14 +1075,60 @@ scroll-snap-align:start;
   overflow:hidden;
   box-shadow:0 16px 38px rgba(0,0,0,.28), 0 0 0 1px rgba(100,170,255,.12);
 }
-section{
-  scroll-margin-top:24px;
+
+</style>
+<style>
+
+/* Correção segura do HERO: CSS válido, sem alterar outras seções */
+.hero-copy{
+  margin-bottom:clamp(16px, 2.5vw, 28px) !important;
 }
-section + section{
-  margin-top:clamp(20px, 3vw, 34px) !important;
+.hero-layout{
+  row-gap:clamp(16px, 2.5vw, 28px) !important;
 }
-.hero, .hero-section, .hero-content{
-  padding-bottom:clamp(18px, 3vw, 30px) !important;
+.hero-floating{
+  min-height:0 !important;
+  height:auto !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  border-radius:18px !important;
+}
+.hero-floating img.hero-img-black{
+  position:relative !important;
+  inset:auto !important;
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  margin:0 auto !important;
+  transform:none !important;
+  object-fit:cover !important;
+  border-radius:18px !important;
+  filter:drop-shadow(0 12px 22px rgba(0,0,0,.25)) !important;
+}
+@media(max-width:759px){
+  .hero-copy{margin-bottom:18px !important}
+  .hero-layout{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:18px !important;
+    margin-top:0 !important;
+  }
+  .hero-floating{
+    width:100% !important;
+    min-height:0 !important;
+    margin:0 auto !important;
+  }
+  .hero-floating img.hero-img-black{
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+  }
+  .hero-side{margin-top:0 !important}
+  .hero-intro-card{margin-top:0 !important}
 }
 
 </style>

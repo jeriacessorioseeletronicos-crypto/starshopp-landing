@@ -486,6 +486,22 @@ h2{font-size:clamp(31px,8vw,56px);line-height:.98;letter-spacing:-.045em;margin:
   .ml-proof-card{grid-template-columns:auto 1fr;align-items:start}
   .ml-proof-meter{grid-column:1/-1;min-width:0;margin-top:2px}
 }
+/* Ajuste pontual: centralizar a imagem lifestyle do hero sem mexer nos demais elementos */
+.hero-floating img[src*="interior-starlink-carro"]{
+  left:50%!important;
+  width:min(100%,900px)!important;
+  max-width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+@media(max-width:759px){
+  .hero-floating img[src*="interior-starlink-carro"]{
+    left:50%!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
+
 @media(prefers-reduced-motion:reduce){ .hero-floating img{animation:none!important} }
 
 /* V6: price color correction */

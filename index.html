@@ -1032,33 +1032,46 @@ scroll-snap-align:start;
 
 <style>
 
-/* Ajuste pontual das duas imagens de produto: maiores, próximas e com leve sobreposição */
-.product-colors,
-.color-products,
-.support-colors,
-.product-variants,
-.dual-product-images {
-  gap: 8px !important;
-}
-.product-colors img,
-.color-products img,
-.support-colors img,
-.product-variants img,
-.dual-product-images img {
-  width: min(48%, 270px) !important;
-  max-width: 270px !important;
-}
+</style>
+<style>
 
-/* Seletores responsivos adicionais para a galeria de versões */
-.section{display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important;}
-.section img{width:54%!important;max-width:300px!important;margin-left:-4%!important;}
-.section img:first-child{z-index:2;position:relative;}
-.section img:nth-child(2){z-index:1;position:relative;margin-left:-8%!important;}
-
-@media(max-width: 600px){
-  .product-colors img,.color-products img,.support-colors img,.product-variants img,.dual-product-images img {
-    width: 54% !important;
-    max-width: 220px !important;
+/* Correção pontual: somente o par de imagens da seção "A mudança" */
+.hero-product-pair{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:0 !important;
+  width:100%;
+  max-width:520px !important;
+  margin:35px auto 20px !important;
+  padding:0 12px;
+  box-sizing:border-box;
+}
+.hero-product-pair img{
+  display:block;
+  position:relative;
+  flex:0 1 50%;
+  width:50% !important;
+  max-width:270px !important;
+  height:auto !important;
+  object-fit:contain;
+  margin:0 !important;
+}
+.hero-product-pair img:first-child{
+  z-index:2;
+  transform:translateX(7%) scale(1.12);
+}
+.hero-product-pair img:nth-child(2){
+  z-index:1;
+  transform:translateX(-7%) scale(1.12);
+}
+@media(max-width:759px){
+  .hero-product-pair{
+    max-width:440px !important;
+    margin:24px auto 16px !important;
+  }
+  .hero-product-pair img{
+    max-width:230px !important;
   }
 }
 

@@ -964,7 +964,26 @@ location.reload();
 }catch(_){}},4000);
 }catch(_){}}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
-}catch(_){}})();</script></head>
+}catch(_){}})();</script>
+<style>
+/* Oferta: parcelamento em destaque e preço Pix secundário */
+.installment-highlight{padding:10px 0 2px!important}
+.installment-highlight .main-price-caption{color:#8fb4d1!important}
+.installment-main-value{display:flex!important;flex-direction:column;align-items:center;gap:0;color:#11e7a2!important;font-size:clamp(54px,14vw,76px)!important;letter-spacing:-.065em!important}
+.installment-prefix{font-size:.38em;line-height:1.15;letter-spacing:-.025em;font-weight:850;color:#b9ccdc;margin-bottom:1px}
+.installment-main-amount{display:inline-flex;align-items:baseline;white-space:nowrap;line-height:1}
+.installment-main-amount .pix-currency{font-size:.55em!important;letter-spacing:-.06em!important}
+.installment-main-amount #priceMajor{font-size:1em;font-weight:950;letter-spacing:-.075em}
+.installment-main-amount .pix-decimals{font-size:.55em!important;letter-spacing:-.06em!important}
+.pix-secondary-line{margin:12px auto 6px!important;max-width:390px!important;padding:10px 14px!important;font-size:13px!important;flex-wrap:nowrap!important}
+.pix-secondary-line .price{font-size:17px!important;color:#e4edf5!important}
+.pix-secondary-line .price-major,.pix-secondary-line .price-dec{font-size:1em!important;font-weight:900!important;line-height:1!important}
+.pix-secondary-line .price-currency{font-size:.8em!important}
+.offer-section-promo{margin:22px auto 0!important;width:min(100%,700px)!important;max-width:700px!important}
+@media(max-width:420px){.installment-main-value{font-size:clamp(48px,14.5vw,64px)!important}.pix-secondary-line{font-size:12px!important;padding:10px 8px!important}.pix-secondary-line .price{font-size:15px!important}}
+</style>
+
+</head>
 <body>
 <div class="topbar">Desenvolvido para <b>Starlink Mini</b> - Suporte + conversor integrado em uma única solução</div>
 
@@ -1231,20 +1250,11 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
           </div>
 
           <div class="offer-top price-offer-label"><span class="offer-tag">OFERTA ESPECIAL</span></div>
-          <div class="main-pix-price">
-            <span class="main-price-caption">PAGAMENTO NO PIX</span>
-            <div class="main-price-value" aria-label="Preço no Pix"><span class="pix-currency">R$</span><span id="pixWhole">319</span><span class="pix-decimals" id="pixDecimals">,00</span></div>
+          <div class="main-pix-price installment-highlight">
+            <div class="main-price-value installment-main-value" aria-label="Parcelamento no cartão"><span class="installment-prefix">12x de</span><span class="installment-main-amount"><span class="pix-currency">R$</span><span id="priceMajor">35</span><span class="pix-decimals" id="priceDec">,78</span></span></div>
           </div>
-          <div class="card-installment-line">
-            <span class="installment-icon" aria-hidden="true">💳</span>
-            <span>ou <strong>12x de <span class="price" aria-label="parcelamento no cartão"><span class="price-currency">R$</span><span class="price-major" id="priceMajor">35</span><span class="price-dec" id="priceDec">,78</span></span></strong> no cartão</span>
-          </div>
-          <div class="pix-promo-box">
-            <div class="promo-topline"><span class="promo-flame" aria-hidden="true">🔥</span><span class="promo-kicker">DESCONTO EXCLUSIVO</span></div>
-            <h3 class="promo-title">Ganhe <em>5% OFF</em> no Pix</h3>
-            <p class="pix-promo-use">Aplique este cupom no checkout e aproveite:</p>
-            <div class="coupon-code-row"><div class="pix-coupon">PROMO5</div><span class="coupon-hint">CUPOM PIX</span></div>
-            <div class="timer-box"><span>Oferta por tempo limitado</span><b id="promoTimer">03:00:00</b></div>
+          <div class="card-installment-line pix-secondary-line">
+            <span>ou <strong><span class="price" aria-label="Preço no Pix"><span class="price-currency">R$</span><span class="price-major" id="pixWhole">319</span><span class="price-dec" id="pixDecimals">,00</span></span></strong> no Pix</span>
           </div>
 
           <a class="cta" id="ctaOferta" href="https://checkout.starshopp.net/VCCL1O8SD9FS">QUERO GARANTIR O MEU AGORA <span class="cta-arrow">→</span></a>
@@ -1257,6 +1267,13 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
         </div>
       </div>
       <div class="offer-note">O pagamento e a finalização da compra acontecem no site da Star Shopp.</div>
+    </div>
+    <div class="pix-promo-box offer-section-promo reveal">
+      <div class="promo-topline"><span class="promo-flame" aria-hidden="true">🔥</span><span class="promo-kicker">DESCONTO EXCLUSIVO</span></div>
+      <h3 class="promo-title">Ganhe <em>5% OFF</em> no Pix</h3>
+      <p class="pix-promo-use">Aplique este cupom no checkout e aproveite:</p>
+      <div class="coupon-code-row"><div class="pix-coupon">PROMO5</div><span class="coupon-hint">CUPOM PIX</span></div>
+      <div class="timer-box"><span>Oferta por tempo limitado</span><b id="promoTimer">03:00:00</b></div>
     </div>
   </div>
 </section>

@@ -1378,7 +1378,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 <div class="sticky" id="sticky">
   <div class="sticky-inner">
-    <div class="sticky-price"><small>12x de</small><b id="stickyPrice">R$ 35,78</b></div>
+    <div class="sticky-price"><small>12x de</small><b id="stickyPrice">R$ 27,64</b></div>
     <a class="cta" id="ctaSticky" href="#oferta">VER OFERTA <span class="cta-arrow">↓</span></a>
   </div>
 </div>
@@ -1473,11 +1473,9 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   // O valor de cada comprimento (319 / 329 / 359) É o preço real no Pix,
   // exatamente como informado — não aplicamos nenhum desconto adicional
   // em cima dele. O 12x é esse mesmo valor rateado com a MESMA proporção
-  // que já existia entre o 12x total e o Pix nesta página (510,12 / 312,62),
-  // ou seja, o card cobre o custo do parcelamento, sem inventar um valor
-  // "de/por" fictício. Ajuste CARD_RATIO se a taxa real do seu
-  // cartão/Vega for diferente.
-  const CARD_RATIO = 510.12/312.62;
+  // aplicando acréscimo total de 3,99% sobre o preço no Pix.
+  // Confira se essa proporção corresponde à taxa efetivamente cobrada pela Vega.
+  const CARD_RATIO = 1.0399;
 
   const PHOTOS = {
     preto:  'assets/buybox-preto.png',

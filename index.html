@@ -3,6 +3,26 @@
 <head><script src="/boss-nsfw-guard.js" defer></script><style>:root{--sidebar-width:260px;--sidebar-rail-width:52px}</style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>
+/* Evita que o navegador restaure a rolagem antiga ao recarregar a página. */
+try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+(function () {
+  function isReload() {
+    try { var nav = performance.getEntriesByType('navigation')[0]; return !!nav && nav.type === 'reload'; } catch (e) { return false; }
+  }
+  function resetScrollOnReload() {
+    if (!isReload()) return;
+    try { if (location.hash === '#video') history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    window.scrollTo(0, 0);
+    requestAnimationFrame(function () { window.scrollTo(0, 0); });
+    setTimeout(function () { window.scrollTo(0, 0); }, 80);
+    setTimeout(function () { window.scrollTo(0, 0); }, 350);
+  }
+  window.addEventListener('pageshow', resetScrollOnReload);
+  if (document.readyState === 'complete') resetScrollOnReload();
+  else window.addEventListener('load', resetScrollOnReload, { once: true });
+})();
+</script>
 <meta name="theme-color" content="#04080d">
 <script>document.documentElement.classList.add("js-enabled");</script>
 <title>Suporte + Conversor para Starlink Mini | Star Shopp</title>
